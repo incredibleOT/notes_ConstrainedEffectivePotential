@@ -1,0 +1,88 @@
+To determine the phase structure of the model, i.e.\ determine the phase the system is in depending on the choice of parameters, 
+one has to find out, what the minimum of the CEP is w.r.t.\ $m_{\Phi}$ and $s_{\Phi}$. The simplest ansatz, would be the tree-level (again with fermions):
+\begin{align}\label{eq:CEP_treelevel}
+ U(m_{\Phi}, s_{\Phi}) =& -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
+                         + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
+                           \nonumber \\
+                        & -\frac{2N_f}{V} \log \sum\limits_p
+                                    \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
+                                    \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+                                    \nonumber \right. \\ 
+                        & \left. +  m_{\Phi}^2 \hat y^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right]
+\end{align}
+Here $\nu^+(p)$ labels the eigenvalue of the overlap operator\footnote{In the definition of this eigenvalue and how it is implemeted in the 
+code, there is a difference in the prefactor of $r$, the Wilson parameter. I think, its origin may lie in an ambiguity of
+the definition of the Wilson parameter. What is written hiere, is how it is in the code and how I implemented it}. 
+It expression and the other abreviations used are ($a=1$):
+\begin{equation}
+ \label{eq:eigenvalue_overlapOperator_and_gamma}
+ \nu^{\pm}(p) = \rho \left( 1 + 
+                      \frac{ \pm i \sqrt{{\tilde p} ^2} + r  {\hat p}^2 - \rho}
+                           {\sqrt{ {\tilde p} ^2 + \left( r  {\hat p}^2 - \rho\right)^2}}\right),\qquad
+ \gamma^{\pm}(p) = 1- \frac{1}{2 \rho}\nu^{\pm}(p),
+ \end{equation}
+ \begin{equation}
+ \label{eq:def_momentumAbreviations}
+ {\hat p}^2 = 4 \sum\limits_{\mu} \sin^2\left(\frac{p_{\mu}}{2}\right),\qquad
+ {\tilde p}^2 = \sum\limits_{\mu} \sin^2\left(p_{\mu}\right),\qquad
+ \wp = p + p_s.
+\end{equation}
+
+This is however just a very crude approximation. In Philipp's thesis, he draw a common factor of $N_f$ in front of the action and redefined the couplings 
+and the magnetizations according to:
+\begin{equation}\label{eq:def_reparametrization_couplingsAndMagnetization_Nf}
+ \hat y = \frac{y_N}{\sqrt{N_f}},\qquad
+ \hat \lambda = \frac{\lambda_N}{N_f},\qquad
+ \breve{m}/_{\Phi} = \sqrt{N_f} m_{\Phi},\qquad
+ \breve{s}/_{\Phi} = \sqrt{N_f} s_{\Phi}.
+\end{equation}
+The reason for that is, if you also rescale the scalar field according to $\breve{\Phi}=\sqrt{N_f}\Phi$, the action becomes independet of $N_f$. 
+When keeping now $\lambda_N$ and $y_N$ constant when performing the limit $N_f \rightarrow \infty$, everything but the treelevel get's suppressed by 
+powers of $\frac{1}{N_f}$.
+To reproduce the expression used by Philipp, also draw a factor in front of $U$:
+\begin{align}\label{eq:CEP_treelevel_reparametrized}
+ \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) =& \frac{U}{N_f} \nonumber \\
+            =& -8 \kappa \left( \breve{m}_{\Phi}^2 - \breve{s}_{\Phi}^2 \right)   +   \left( \breve{m}_{\Phi}^2 + \breve{s}_{\Phi}^2 \right)
+                         + \lambda_N \left( \breve{m}_{\Phi}^4 + s_{\Phi}^4 + 6 \breve{m}_{\Phi}^2 \breve{s}_{\Phi}^2
+                         - 2 \left(\breve{m}_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
+                           \nonumber \\
+                        & -\frac{2}{V} \log \sum\limits_p
+                                    \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
+                                    \hat y ^2 \left( m_{\Phi}^2 - \breve{s}_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+                                    \nonumber \right. \\ 
+                        & \left. +  \breve{m}_{\Phi}^2 y_N^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right].
+\end{align}
+
+The addition of the first order term in $\hat \lambda$ is straight foward:
+\begin{equation}\label{eq:CEP_oneLoopAddition}
+ U(m_{\Phi}, s_{\Phi}) \rightarrow U(m_{\Phi}, s_{\Phi}) + 16\, \hat \lambda\, P_B, \qquad 
+ \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) \rightarrow  \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) + 16 \,\frac{\lambda_N}{N_f}\, P_B.
+\end{equation}
+
+
+
+
+
+\subsection*{Limits of the CEP and problems with first order in $\lambda$}
+The whole approach of integrating out the Gaussian contribution is only valid, if the bosonic determinant~\eqref{eq:def_BosonicDeterminant}
+is positive definit. This limits the range of values for $\hat\lambda$ and $\kappa$:
+\begin{equation}\label{eq:limits_for_CEP_from_matrix}
+ 0 \stackrel{!}{<} 2 - 4 N_f - 4 \kappa \sum\limits_{\mu} \sin(p_{\mu}) \quad \Rightarrow \quad
+ \hat\lambda < \frac{1}{2 N_f} ,\qquad
+ |\kappa| < \frac{1 - 2 N_f \hat \lambda}{8}.
+\end{equation}
+While this might only be a somehow estitical problem for the tree-level, it gets serious when including the the first order in 
+$\lambda$ (\eqref{eq:CEP_firstOrderLambda_zeroModeContribution} and \eqref{eq:CEP_firstOrderLambda_zeroModeContribution}), since the denominator
+becomes negative or (close to) zero, spoiling everything.
+This is extremely unpleasant, since the first order in $\lambda$ has a huge effect. To see this, remove the fermions and assume, you are in a phase, where 
+there should be either the symmetric or the ferromagnetic phase, i.e.\ $s_{\Phi}=0$. Then the CEP reduces to:
+\begin{equation}\label{eq:simple_CEP_reduction}
+ U(m_{\Phi}) = \Bigl( \underbrace{1 - 8\kappa - 2 N_f \hat \lambda}_{\mathcal{O}(0\dots 2)} 
+             + \underbrace{ 16\, \hat\lambda\, P_B}_{\mathcal{O}(10\hat\lambda)} \Bigr)\cdot m_{\Phi}^2 + \hat \lambda m_{\Phi}^4.
+\end{equation}
+For this potential, to have a minimum at $m_{\Phi}\neq 0$, the coefficient of the quadratic term must be negative. Without the first order term, this happens 
+when $\kappa$ violates the condition~\eqref{eq:limits_for_CEP_from_matrix}. With fermions turned on, they help, that a non-zero minimum 
+is found without violating this condition. However, the effect of the fermions is only small. If one now compares the order of magnitude, the first order term in 
+$\hat\lambda$ give a very strong contribution which cannot be compensated by the fermions anymore (with resonable couplings at least).
+
+

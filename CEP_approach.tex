@@ -1,0 +1,95 @@
+Here the general idea of the constrained effective potential (CEP) will be described. It is basically what is written in 
+Philipp's thesis (chapter 4 and 6.3). The only real difference is, that in the thesis a general factor of $N_f$ drawn in front of the action
+to consider the remaining part as independent from $N_f$. For that, some redefinitions of the coupling constants are performed. The reason to do that was, to investigate the phase structure of the model in the large $N_f$-limit. Further I will only quote the fermionic contributions, since I don't understand their derivation.
+
+The general idea do consider a potential that only depends on an assumed ground state of the system. 
+In the here considered model we consider the ground state
+to consist of a zero momentum mode and a so called staggered mode:
+\begin{equation}\label{eq:def_groundstate}
+ \Phi^g_x=m_{\Phi} \cdot \hat \Phi_1 + s_{\Phi} \cdot e^{i p_s \cdot x}\cdot \hat \Phi_2 \qquad p_s=(\pi,\pi,\pi,\pi),
+\end{equation}
+with $\hat \Phi_{1/2}$ being constant vectors. Since the (relative) orientation of those vectors does not matter, 
+one can assume them to be identical. The magnetization $m_{\Phi}$ and the staggered magnetization $s_{\Phi}$ will later be the order
+parameters of the model.
+
+The scalar field wil be considered in momentum space. As a reminder, Fourier transformation looks like:
+\begin{equation}\label{eq:def_FourierTrafoScalar}
+ \tilde \Phi_p = \frac{1}{\sqrt{V}}\sum\limits_x e^{-i\, p \cdot x} \Phi_x,\quad \Phi_x= \frac{1}{\sqrt{V}}\sum\limits_x e^{i\, p \cdot x} \tilde \Phi_p.
+\end{equation}
+
+The magnetizations are defined as follows:
+\begin{equation}\label{eq:def_magnetizations}
+ m_{\Phi}=\left| \frac{1}{V} \sum\limits_x \Phi_x \right| \rightarrow \tilde\Phi_0 = \sqrt{V}m_{\Phi},\quad
+ s_{\Phi}=\left| \frac{1}{V} \sum\limits_x e^{i\, p_s \cdot x}\Phi_x \right| \rightarrow \tilde\Phi_{p_s} = \sqrt{V}s_{\Phi}.
+\end{equation}
+
+With that, the CEP $U(m,s)$ is defined via:
+\begin{equation}\label{eq:def_CEP}
+ V\cdot U(m,s) = -\log \left(\int D\Psi D\bar\Psi \left. \left[\prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right]
+          e^{-S[\Psi,\bar\Psi,\Phi]} 
+          \right|_{ \begin{array}{l} \scriptscriptstyle \tilde \Phi_0=\sqrt{V} m_{\Phi} \\ 
+                                     \scriptscriptstyle \tilde \Phi_{p_s}=\sqrt{V}s_{\Phi} \end{array}}  \right),
+\end{equation}
+with the action being composed of a fermionic ($S_F$) and a purely bosonic part ($S_B$).
+The bosonic action can be written as follows:
+\begin{equation}\label{eq:def_bosonicActionInLatticeNotation}
+ S_B[\Phi] = -\kappa \sum\limits_{x,\mu} \Phi_x^{\dagger} \left[\Phi_{x+\hat\mu} + \Phi_{x-\hat\mu} \right] 
+              + \sum\limits_x \Phi_x^{\dagger} \Phi_x 
+              + \hat{\lambda} \sum\limits_x \left( \Phi_x^{\dagger} \Phi_x - N_f\right)^2 ,
+\end{equation}
+and the Fourier transformation of the individual parts are:
+\begin{align}
+ \sum\limits_{x} \Phi_x^{\dagger} \Phi_x &= 
+                     \frac{1}{V}  \sum\limits_{x}  \sum\limits_{p,q}  \left( e^{-i\, p \cdot x}  \tilde\Phi_p^{\dagger} \right)
+                     \left( e^{i\, q \cdot x}  \tilde\Phi_{q} \right), \nonumber \\
+                  &= \frac{1}{V}  \sum\limits_{p,q,}  
+                     \underbrace{ \sum\limits_{x}  e^{ -i (p - q) \cdot x} }_{V \cdot \delta_{p,q}}  \tilde\Phi_p^{\dagger} \tilde\Phi_q ,
+                     \nonumber \\
+                  &= \sum\limits_{p}  \tilde\Phi_p^{\dagger} \tilde\Phi_p 
+                      \label{eq:FourierTrafoPhiSquared},
+\end{align}
+% 
+\begin{align}
+ \sum\limits_{x,\mu} \Phi_x^{\dagger} \left[\Phi_{x+\hat\mu} + \Phi_{x-\hat\mu} \right] &= 
+                     \frac{1}{V}  \sum\limits_{x,\mu}  \sum\limits_{p,q}   e^{-i\, p \cdot x}  \tilde\Phi_p^{\dagger} 
+                     \left[  e^{i\, q \cdot (x+\hat\mu)}  \tilde\Phi_{q}   +   e^{i\, q \cdot (x-\hat\mu)}  \tilde\Phi_{q}  \right], \nonumber \\
+                  &= \frac{1}{V}  \sum\limits_{p,q,\mu}  
+                     \sum\limits_{x}  e^{ -i (p - q) \cdot x}  \tilde\Phi_p^{\dagger} \tilde\Phi_q 
+                     \underbrace{ \left(  e^{i\, q_{\mu}}  +  e^{-i\, q_{\mu}} \right)  }_{ 2\cdot \cos(q_{\mu}) }, \nonumber \\
+                  &= \sum\limits_{p}  \tilde\Phi_p^{\dagger} \left[  2 \cdot \sum\limits_{\mu} \cos(p_{\mu})  \right]  \tilde\Phi_p 
+                      \label{eq:FourierTrafoKappaTerm},
+\end{align}
+% 
+\begin{align}
+ \sum\limits_{x} \left( \Phi_x^{\dagger} \Phi_x \right)^2 &= 
+                     \frac{1}{V^2}  \sum\limits_{x}  \sum\limits_{p,q,r,s}  
+                     \left( e^{-i\, p \cdot x}  \tilde\Phi_p^{\dagger} \right) \left( e^{i\, q \cdot x}  \tilde\Phi_{q} \right)
+                     \left( e^{-i\, r \cdot x}  \tilde\Phi_r^{\dagger} \right) \left( e^{i\, s \cdot x}  \tilde\Phi_{s} \right), \nonumber \\
+                  &= \frac{1}{V^2}  \sum\limits_{p,q,r,s}  
+                     \sum\limits_{x}  e^{ -i (p + r - q - s) \cdot x }  \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
+                     \nonumber \\
+                  &= \frac{1}{V}\sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s 
+                      \label{eq:FourierTrafoPhiToTheFour}.
+\end{align}
+%
+Now, in momentum space, the bosonic action can be written as:
+\begin{align}
+ S_B[\Phi] &= -\kappa  \sum\limits_{x,\mu}  \Phi_x^{\dagger}  \left[ \Phi_{x+\hat\mu} + \Phi_{x-\hat\mu} \right] 
+              + \sum\limits_x \Phi_x^{\dagger} \Phi_x 
+              + \hat{\lambda} \left( \sum\limits_x \Phi_x^{\dagger} \Phi_x - N_f\right)^2, \nonumber \\
+           &=  \frac{1}{2}  \sum\limits_{p}  \tilde\Phi_p^{\dagger}  
+              \left[ 2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right]  \tilde\Phi_p
+              + \frac{\hat\lambda}{V} \sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s .
+\end{align}
+A constant term was ignored here, since we are only interested in terms depending on $m$ and $s$.
+%
+% 
+
+If one could compute the CEP, one obtains some information: First of all, the absolute minimum of the CEP will be the ground state and if the 
+minimum occures at zero or non-zero (staggered) magnetization determines the phase the system is in. Further, any observable that only depends on 
+the $\tilde \Phi_0$ and/or $\Phi_{p_s}$ can be computed from a two-dimensional integral:
+\begin{equation}\label{eq:obsFromCEP}
+ \left< \mathcal{O}(\tilde \Phi_0,\tilde \Phi_{p_s}) \right > = 
+      \mathcal{Z}^{-1} \int d \tilde \Phi_0\, d \tilde \Phi_{p_s} 
+      \left( \mathcal{O}(\tilde \Phi_0,\tilde \Phi_{p_s})\, e^{-V\cdot U(\tilde \Phi_0,\tilde \Phi_{p_s})} \right)
+\end{equation}

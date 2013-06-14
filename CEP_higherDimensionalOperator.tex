@@ -1,0 +1,28 @@
+Here the addition of a higher dimensional operator should be discussed. The new bosonic action in the lattice notation is then:
+\begin{equation}\label{eq:bosonicLatticeActionWithLambda_6}
+ S_B[\Phi]  = -\kappa \sum\limits_{x,\mu} \Phi_x^{\dagger} \left[\Phi_{x+\hat\mu} + \Phi_{x-\hat\mu} \right] 
+              + \sum\limits_x \Phi_x^{\dagger} \Phi_x 
+              + \hat{\lambda} \sum\limits_x \left( \Phi_x^{\dagger} \Phi_x - N_f\right)^2 + \hat \lambda_6 \sum\limits_x \left( \Phi_x^{\dagger} \Phi_x \right)^2
+\end{equation}
+With that, the CEP changes. With the given notation however, only the tree level part changes, since the new parameter does not enter the gaussion contribution.
+The Fourier transorm of the new term looks like:
+\begin{align}
+ \sum\limits_{x} \left( \Phi_x^{\dagger} \Phi_x \right)^3 &= 
+                     \frac{1}{V^3}  \sum\limits_{x}  \sum\limits_{p_1,\dots p6}  
+                     \left( e^{-i\, p_1 \cdot x}  \tilde\Phi_{p_1}^{\dagger} \right) \left( e^{i\, p_2 \cdot x}  \tilde\Phi_{p_2} \right)
+                     \left( e^{-i\, p_3 \cdot x}  \tilde\Phi_{p_3}^{\dagger} \right) \left( e^{i\, p_4 \cdot x}  \tilde\Phi_{p_4} \right)
+                     \left( e^{-i\, p_5 \cdot x}  \tilde\Phi_{p_5}^{\dagger} \right) \left( e^{i\, p_6 \cdot x}  \tilde\Phi_{p_6} \right), \nonumber \\
+                  &= \frac{1}{V^3}  \sum\limits_{p_1,\dots p6} 
+                     \sum\limits_{x}  e^{ -i (p_1 + p_3 + p_5 - p_2 - p_4 - p_6) \cdot x }  
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6},
+                     \nonumber \\
+                  &= \frac{1}{V^2}\sum\limits_{p_1,\dots p6} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6} 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}
+                      \label{eq:FourierTrafoPhiToTheSix}.
+\end{align}
+The contribution do the tree-level of the CEP is then:
+\begin{equation}\label{eq:CEP_tree_level_Contribution_from_lambda_6}
+ \hat\lambda_6 \left( m_{\Phi}^6 + s_{\Phi}^6 + 15 m_{\Phi}^4 s_{\Phi}^2 + 15 m_{\Phi}^2 s_{\Phi}^4\right).
+\end{equation}
+\textbf{let this check!}
+

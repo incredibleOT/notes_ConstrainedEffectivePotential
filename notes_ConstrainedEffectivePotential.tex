@@ -1,0 +1,49 @@
+\documentclass[a4paper,10pt,final]{article}
+\usepackage[ansinew]{inputenc}
+\usepackage{amssymb,amsmath,textcomp}
+\usepackage{graphicx} 
+\usepackage[margin=2cm]{geometry}
+\usepackage{showkeys}
+\usepackage[format=hang,small,singlelinecheck=true]{caption} 
+\usepackage{subfig}	%2 grafiken nebeneinander	
+\usepackage{multirow}	% mehrreihige Tabelleneintraege
+\usepackage{slashed}   %for dirac-slash
+\usepackage{simplewick}
+\usepackage{url}
+\usepackage{hyperref}
+%%%to fight the ''Package hyperref Warning: bookmark level for unknown Chapter defaults to 0.''-warning
+\makeatletter
+\providecommand*{\toclevel@Chapter}{0}
+\makeatother
+%################################################################################
+ \numberwithin{equation}{section} %nummerierung der Gleichungen mit section
+%################################################################################
+\title{Notes concerning the constrained effective potential}
+\author{Attila Nagy}
+\date{\today}
+
+
+%%some newcommands%%
+\newcommand{\Ls}{L_{_s}}
+\newcommand{\Lt}{L_{_t}}
+\newcommand{\kc}{\kappa_{c}}
+\newcommand{\hl}{\hat{\lambda}}
+\begin{document}
+\section{General approach}
+\input{CEP_approach.tex}
+%
+\section{Expansion of the action}
+\input{CEP_expansion.tex}
+\section{Determination of the phase structure}
+\input{CEP_phaseStructure.tex}
+\section{Inclusion of a higher dimensional operator}
+\input{CEP_higherDimensionalOperator.tex}
+\section{Lower mass bound from the CEP}
+\input{CEP_lowerMassBound.tex}
+
+% \bibliographystyle{unsrt}
+% \addcontentsline{toc}{Chapter}{Bibliography}
+% \clearpage
+% \bibliography{references_Higgs_Yukawa.bib}
+%
+\end{document}
