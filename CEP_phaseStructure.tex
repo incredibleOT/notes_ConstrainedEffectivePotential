@@ -4,7 +4,7 @@ one has to find out, what the minimum of the CEP is w.r.t.\ $m_{\Phi}$ and $s_{\
  U(m_{\Phi}, s_{\Phi}) =& -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
                          + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
                            \nonumber \\
-                        & -\frac{2N_f}{V} \log \sum\limits_p
+                        & -\frac{2N_f}{V} \sum\limits_p \log
                                     \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
                                     \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
                                     \nonumber \right. \\ 
@@ -28,15 +28,16 @@ It expression and the other abreviations used are ($a=1$):
  \wp = p + p_s.
 \end{equation}
 
-This is however just a very crude approximation. In Philipp's thesis, he draw a common factor of $N_f$ in front of the action and redefined the couplings 
-and the magnetizations according to:
+This is however just a very crude approximation. In Philipp's thesis, he draw a common factor of $N_f$ in front of the action and redefined the couplings,
+magnetizations and the field according to:
 \begin{equation}\label{eq:def_reparametrization_couplingsAndMagnetization_Nf}
  \hat y = \frac{y_N}{\sqrt{N_f}},\qquad
  \hat \lambda = \frac{\lambda_N}{N_f},\qquad
- \breve{m}/_{\Phi} = \sqrt{N_f} m_{\Phi},\qquad
- \breve{s}/_{\Phi} = \sqrt{N_f} s_{\Phi}.
+ \breve{m}_{\Phi} = \sqrt{N_f} m_{\Phi},\qquad
+ \breve{s}_{\Phi} = \sqrt{N_f} s_{\Phi},\qquad 
+ \breve{\Phi}=\frac{\Phi.}{\sqrt{N_f}}.
 \end{equation}
-The reason for that is, if you also rescale the scalar field according to $\breve{\Phi}=\sqrt{N_f}\Phi$, the action becomes independet of $N_f$. 
+The reason for that is, that the action becomes independet of $N_f$. 
 When keeping now $\lambda_N$ and $y_N$ constant when performing the limit $N_f \rightarrow \infty$, everything but the treelevel get's suppressed by 
 powers of $\frac{1}{N_f}$.
 To reproduce the expression used by Philipp, also draw a factor in front of $U$:
@@ -46,17 +47,18 @@ To reproduce the expression used by Philipp, also draw a factor in front of $U$:
                          + \lambda_N \left( \breve{m}_{\Phi}^4 + s_{\Phi}^4 + 6 \breve{m}_{\Phi}^2 \breve{s}_{\Phi}^2
                          - 2 \left(\breve{m}_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
                            \nonumber \\
-                        & -\frac{2}{V} \log \sum\limits_p
+                        & -\frac{2}{V} \sum\limits_p \log
                                     \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
-                                    \hat y ^2 \left( m_{\Phi}^2 - \breve{s}_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+                                    \hat y ^2 \left( \breve{m}_{\Phi}^2 - \breve{s}_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
                                     \nonumber \right. \\ 
                         & \left. +  \breve{m}_{\Phi}^2 y_N^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right].
 \end{align}
 
 The addition of the first order term in $\hat \lambda$ is straight foward:
 \begin{equation}\label{eq:CEP_oneLoopAddition}
- U(m_{\Phi}, s_{\Phi}) \rightarrow U(m_{\Phi}, s_{\Phi}) + 16\, \hat \lambda\, P_B, \qquad 
- \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) \rightarrow  \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) + 16 \,\frac{\lambda_N}{N_f}\, P_B.
+ U(m_{\Phi}, s_{\Phi}) \rightarrow U(m_{\Phi}, s_{\Phi}) + 16\, \hat \lambda\, \left(m_{\Phi}^2+s_{\Phi}^2\right) P_B, \qquad 
+ \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) \rightarrow  
+       \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) + 16 \,\frac{\lambda_N}{N_f}\,\left( \breve{m}_{\Phi}^2 + \breve{s}_{\Phi}^2 \right) P_B.
 \end{equation}
 
 
@@ -67,12 +69,12 @@ The addition of the first order term in $\hat \lambda$ is straight foward:
 The whole approach of integrating out the Gaussian contribution is only valid, if the bosonic determinant~\eqref{eq:def_BosonicDeterminant}
 is positive definit. This limits the range of values for $\hat\lambda$ and $\kappa$:
 \begin{equation}\label{eq:limits_for_CEP_from_matrix}
- 0 \stackrel{!}{<} 2 - 4 N_f - 4 \kappa \sum\limits_{\mu} \sin(p_{\mu}) \quad \Rightarrow \quad
+ 0 \stackrel{!}{<} 2 - 4 N_f - 4 \kappa \sum\limits_{\mu} \cos(p_{\mu}) \quad \Rightarrow \quad
  \hat\lambda < \frac{1}{2 N_f} ,\qquad
  |\kappa| < \frac{1 - 2 N_f \hat \lambda}{8}.
 \end{equation}
 While this might only be a somehow estitical problem for the tree-level, it gets serious when including the the first order in 
-$\lambda$ (\eqref{eq:CEP_firstOrderLambda_zeroModeContribution} and \eqref{eq:CEP_firstOrderLambda_zeroModeContribution}), since the denominator
+$\lambda$ (\eqref{eq:CEP_firstOrderLambda_zeroModeContribution} and \eqref{eq:CEP_firstOrderLambda_staggeredModeContribution}), since the denominator
 becomes negative or (close to) zero, spoiling everything.
 This is extremely unpleasant, since the first order in $\lambda$ has a huge effect. To see this, remove the fermions and assume, you are in a phase, where 
 there should be either the symmetric or the ferromagnetic phase, i.e.\ $s_{\Phi}=0$. Then the CEP reduces to:

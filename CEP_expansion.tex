@@ -22,7 +22,7 @@ From $S_0$ on gets the contraction of the scala field:
 \begin{equation}\label{eq:ContractionOfBosonicField}
  \contraction{}{\Phi}{{}^\dagger_p}{\Phi{}}  \Phi^\dagger_p \Phi_q = \frac{4 \cdot \delta_{p,q}}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) }.
 \end{equation}
-The factor 4 in the nominator comes from the fact, that this contraction is performed on every component of the scalar field. \textbf{Since this is a crucial statement, find someone to check this!}
+The factor 4 in the numerator comes from the fact, that this contraction is performed on every component of the scalar field. \textbf{Since this is a crucial statement, find someone to check this!}
 
 For the exponential of the CEP we can write now (including the fermionic Part, that will contribute):
 
@@ -39,15 +39,16 @@ If one expands the exponential from $S_{B,I}$ to first order, the integral in \e
                       e^{-S_{I}[\Phi] +  S_{B,0}[\Phi]} =& \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right] 
                       \left( 1 - \frac{\hat\lambda}{V} \hat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} 
                       \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s \right)e^{-S_B,0} \nonumber \\
-                      =& \det \mathcal{B} \cdot \left(1 - \frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right) \right) \nonumber \\
-                      =& \det \mathcal{B} \cdot e^{-\frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right)}
+                      =& \sqrt{\frac{V}{\det \mathcal{B}}} \cdot \left(1 - \frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right) \right) \nonumber \\
+                      =& \sqrt{\frac{V}{\det \mathcal{B}}} \cdot e^{-\frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right)}
 \end{align}
-In the above equations, $\mathcal{B}$ is the bosonic determinant:
+In the above equations, $\det\mathcal{B}$ is the bosonic determinant. The matrix $\mathcal{B}$ is given by:
 \begin{equation}\label{eq:def_BosonicDeterminant}
-\mathcal{B}(p,q)=\delta_{p,q} \left( 2 - 4 \hat\lambda N_f - 4 \kappa \sum\limits_{\mu} \sin(p_{\mu}) \right)
+\mathcal{B}^{i,j}(p,q)=\delta_{i,j}\delta_{p,q} \left( 2 - 4 \hat\lambda N_f - 4 \kappa \sum\limits_{\mu} \cos(p_{\mu}) \right)
 \end{equation}
-It is independet of $m/s_{\Phi}$ and will, 
-when the log of the r.h.s. of \eqref{eq:CEP_firstOrder} taken only contributa a constant and can be neglected.
+\textbf{Check, if determinant occurs in the correct power!}
+The indices $i$ and $j$ label the components of the scalar field. It is independet of $m_{\Phi}/s_{\Phi}$ and will, 
+when the log of the r.h.s. of \eqref{eq:CEP_firstOrder} is taken, only contributa a constant and can be neglected.
 The $C$ come from the different possibilities to contract the four fields. 
 The first one, $C_{p,q}$ comes from a full contraction:
 \begin{equation}\label{eq:CEP_firstOrderLambda_VacuumBubble}
@@ -61,17 +62,17 @@ and will therefore be neglected here.
 The other two contributions in the exponantial origin from those terms in the sum, where some (but not all) occuring momenta are either $0$ or $p_s$:
 \begin{align}\label{eq:CEP_firstOrderLambda_zeroModeContribution}
  C_{p,m}=& \hat{\sum\limits_{p,q}} \left( 
-             \contraction{}{\Phi}{{}_p^{\dagger}}{\Phi} \Phi_p^{\dagger}     \Phi_q \Phi_0^{\dagger} \Phi_0
+             \contraction{}{\Phi}{{}_p^{\dagger}}{\Phi}                              \Phi_p^{\dagger} \Phi_q \Phi_0^{\dagger} \Phi_0
            + \contraction{}{\Phi}{{}_p^{\dagger} \Phi_0 \Phi_0^{\dagger}}{\Phi}      \Phi_p^{\dagger} \Phi_0 \Phi_0^{\dagger} \Phi_q
-           + \contraction{\Phi_0^{\dagger} }{\Phi}{{}_p \Phi_0^{\dagger} }{\Phi}      \Phi_0^{\dagger} \Phi_p \Phi_0^{\dagger} \Phi_q
+           + \contraction{\Phi_0^{\dagger} }{\Phi}{{}_p}{\Phi}                       \Phi_0^{\dagger} \Phi_p \Phi_q^{\dagger} \Phi_0
            + \contraction{\Phi_0^{\dagger} \Phi_0 }{\Phi}{{}_p^{\dagger}}{\Phi}      \Phi_0^{\dagger} \Phi_0 \Phi_p^{\dagger} \Phi_q
             \right) \nonumber \\
         =& 16 \cdot V \cdot m_{\Phi}^2 \sum\limits_{0\neq p \neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})} \\
   \label{eq:CEP_firstOrderLambda_staggeredModeContribution}
- C_{p,m}=& 16 \cdot V \cdot s_{\Phi}^2 \sum\limits_{0\neq p \neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})}.
+ C_{p,s}=& 16 \cdot V \cdot s_{\Phi}^2 \sum\limits_{0\neq p \neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})}.
 \end{align}
 For later use, the propagator sum will be defined:
 \begin{equation}\label{eq:bosonicPropagatorSum_CEP}
- P_B \equiv \frac{1}{V}\sum\limits_{0\neq \neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})}.
+ P_B \equiv \frac{1}{V}\sum\limits_{0\neq p\neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})}.
 \end{equation}
 

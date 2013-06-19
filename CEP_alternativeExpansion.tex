@@ -1,0 +1,69 @@
+Here another way to expand the action should be discussed. More accurate: More terms will contribute to the Gaussian part of the action $S_{B,0}$ 
+which might improve the predictive power of the CEP without the ened to include the one loop term. What will be done is: Take from the interactive part those
+term, that only have two of the bosonic fields being not the zero or staggered mode. With that, they can be considered as contribution to the 
+Gaussioan part. The drawback from this is, that one has to include the bosonic determinant, since it then depends on $m_{\Phi}$ and $s_{\Phi}$. Further,
+if one considers further orders in $\hat\lambda$, the propagator sums will be more complicated and also vacuum bubbles are not independent of $m_{\Phi}$ and $s_{\Phi}$
+anymore.
+
+Starting point is the expression for the $\hat\lambda \left( \Phi^{\dagger}\Phi \right)^2$ term. So far, the decomposition of this term looked like:
+\begin{equation}\label{eq:naive_decomposition_of_phi4_term}
+ \frac{\hat\lambda}{V} \sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s 
+    = V\left( \hat\lambda\left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2s_{\Phi}^2 \right) \right)
+    + \frac{\hat\lambda}{V} \hat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
+\end{equation}
+with the hat above the sum indicating that not \textit{all} occuring momenta are eigther $0$~and/or~$p_s$. The terms in the sum, where two of the momenta 
+are eigther $0$ or $p_s$ are then taken care of in the first order expansion of $\hat\lambda$.
+Another possibility would be:
+\begin{align}\label{eq:alternative_decomposition_of_phi4_term}
+ \frac{\hat\lambda}{V} \sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s 
+    &= V\left( \hat\lambda\left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2s_{\Phi}^2 \right) \right) \nonumber \\
+    &+ \frac{1}{2} \sum\limits_{0\neq p\neq p_s} \tilde\Phi_p^{\dagger} \left[ 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2 ) \right) \right]   \tilde\Phi_p \nonumber \\ 
+    &+ \frac{\hat\lambda}{V} \tilde{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s.
+\end{align}
+Here, the tilde above the some means, that \textit{none} of the occuring momenta is $0$~and/or~$p_s$.
+
+Then, the total bosonic Gaussian contribution is:
+\begin{equation}\label{eq:CEP_alternative_bosonic_Gaussian_contribution}
+ S_{B,0} = \frac{1}{2}  \sum\limits_{0\neq p \neq p_s}  \tilde\Phi_p^{\dagger}  
+              \left[ 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right]  \tilde\Phi_p.
+\end{equation}
+
+If one then expands the interaction part to zeroth order, the calculation for the CEP looks like the following:
+\begin{align}\label{eq:deriv_of_bosDet_step1}
+ e^{-V\cdot U(m_{\Phi}, s_{\Phi})} &= 
+           e^{-V\left(
+             -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)  +  m_{\Phi}^2 + s_{\Phi}^2 
+             + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2\right) \right) \right)} 
+             \nonumber \\
+             &\times e^{-N_f \log \det \mathcal{M}[\Phi^g]} 
+             \nonumber \\
+             &\times \int \left[\prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right] 
+              e^{ \frac{1}{2}  \sum\limits_{0\neq p \neq p_s}  \tilde\Phi_p^{\dagger}  
+              \left[ 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right]  \tilde\Phi_p}, 
+          \\ \label{eq:deriv_of_bosDet_step2}
+          &= e^{-V U^{\text{tree}}(m_{\Phi}, s_{\Phi})} \times e^{-N_f \log \det \mathcal{M}[\Phi^g]} 
+          \nonumber \\
+          & \times \sqrt{\frac{V}{\prod\limits_{0 \neq p \neq p_s} 
+             \left(  2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right) }} ,
+             \\\label{eq:deriv_of_bosDet_step3}
+          &=  e^{-V U^{\text{tree}}(m_{\Phi}, s_{\Phi})} \times e^{-N_f \log \det \mathcal{M}[\Phi^g]} 
+            \nonumber \\
+          & \times e^{-\frac{1}{2}\sum\limits_{0 \neq p \neq p_s} 
+          \log\left( 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right)}
+            \times e^{\frac{\log V}{2}}.
+\end{align}
+So finally the \textit{improved} zero-Order potential is given by:
+\begin{align}\label{eq:improved_zeroOrderPot}
+ U(m_{\Phi}, s_{\Phi}) &= -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
+                         + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
+                           \nonumber \\
+                        & -\frac{2N_f}{V} \sum\limits_p \log
+                                    \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
+                                    \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+                                    \nonumber \right. \\ 
+                        & \left. +  m_{\Phi}^2 \hat y^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right]
+                        \nonumber \\
+                        & - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+          \log\left( 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right)
+\end{align}
+
