@@ -9,7 +9,7 @@ Starting point is the expression for the $\hat\lambda \left( \Phi^{\dagger}\Phi 
 \begin{equation}\label{eq:naive_decomposition_of_phi4_term}
  \frac{\hat\lambda}{V} \sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s 
     = V\left( \hat\lambda\left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2s_{\Phi}^2 \right) \right)
-    + \frac{\hat\lambda}{V} \hat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
+    + \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
 \end{equation}
 with the hat above the sum indicating that not \textit{all} occuring momenta are eigther $0$~and/or~$p_s$. The terms in the sum, where two of the momenta 
 are eigther $0$ or $p_s$ are then taken care of in the first order expansion of $\hat\lambda$.
@@ -18,7 +18,7 @@ Another possibility would be:
  \frac{\hat\lambda}{V} \sum\limits_{p,q,r,s} \delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s 
     &= V\left( \hat\lambda\left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2s_{\Phi}^2 \right) \right) \nonumber \\
     &+ \frac{1}{2} \sum\limits_{0\neq p\neq p_s} \tilde\Phi_p^{\dagger} \left[ 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2 ) \right) \right]   \tilde\Phi_p \nonumber \\ 
-    &+ \frac{\hat\lambda}{V} \tilde{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s.
+    &+ \frac{\hat\lambda}{V} \widetilde{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s.
 \end{align}
 Here, the tilde above the some means, that \textit{none} of the occuring momenta is $0$~and/or~$p_s$.
 
@@ -48,10 +48,12 @@ If one then expands the interaction part to zeroth order, the calculation for th
              \\\label{eq:deriv_of_bosDet_step3}
           &=  e^{-V U^{\text{tree}}(m_{\Phi}, s_{\Phi})} \times e^{-N_f \log \det \mathcal{M}[\Phi^g]} 
             \nonumber \\
-          & \times e^{-\frac{1}{2}\sum\limits_{0 \neq p \neq p_s} 
+          & \times e^{\sum\limits_{0 \neq p \neq p_s} 
           \log\left( 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right)}
-            \times e^{\frac{\log V}{2}}.
+            \times e^{\log V}.
 \end{align}
+\textbf{There might be an additional factor of 4 coming from the components of the bosonic field. this factor however can be absorbed in a constant that 
+is neglected for the potential anyway. Is this correct?}
 So finally the \textit{improved} zero-Order potential is given by:
 \begin{align}\label{eq:improved_zeroOrderPot}
  U(m_{\Phi}, s_{\Phi}) &= -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
@@ -66,4 +68,78 @@ So finally the \textit{improved} zero-Order potential is given by:
                         & - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
           \log\left( 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right)
 \end{align}
+% 
+% 
+\subsubsection*{Alternative approach with a higher dimensional operator}
+
+Here I will show what enters the bosonic determinant if a $\lambda_6 (\Phi^{\dagger}\Phi)^3$-term is included.
+The decomposition with the naive approach looks like:
+\begin{align}\label{eq:naive_decomposition_of_phi6_term}
+ \frac{\hat\lambda_6}{V^2}\sum\limits_{p_1,\dots p6} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6} 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}
+      &=  V \hat\lambda_6 \cdot \left( m_{\Phi}^6 + s_{\Phi}^6 + 15\cdot\left(m_{\Phi}^4 s_{\Phi}^2 + m_{\Phi}^2 s_{\Phi}^4 \right) \right) 
+    \nonumber \\
+      & + \frac{\hat\lambda_6}{V^2}\widehat{\sum\limits_{p_1,\dots p6}} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6} 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}
+\end{align}
+Here again one can take out a Gaussian contribution:
+\begin{align}\label{eq:alternative_decomposition_of_phi6_term}
+ dummy&=\frac{\hat\lambda_6}{V^2}\sum\limits_{p_1,\dots p6} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6} 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}
+    \nonumber \\
+      &=  V \hat\lambda_6 \left( m_{\Phi}^6 + s_{\Phi}^6 + 15\left(m_{\Phi}^4 s_{\Phi}^2 + m_{\Phi}^2 s_{\Phi}^4 \right) \right) 
+    \nonumber \\
+      & +  \frac{1}{2} \sum\limits_{0\neq p\neq p_s} \tilde\Phi_p^{\dagger} \left[ \hat\lambda_6\left( 18 \left( m_{\Phi}^4 + s_{\Phi}^4 \right) 
+                       + 108\,  m_{\Phi}^2 s_{\Phi}^2\right)
+                       \right]   \tilde\Phi_p
+    \nonumber \\
+      & + \frac{\lambda_6}{V} \left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)\widetilde{\sum\limits_{p_1,\dots p4}} \delta_{p_1 + p_3, p_2 + p_4 } 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4}
+    \nonumber \\
+      & + \frac{\hat\lambda_6}{V^2}\widetilde{\sum\limits_{p_1,\dots p6}} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6}
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}.
+\end{align}
+As before, this gives a non-trivial contribution to the bosonic determinant. So finally, the CEP tree-level is given by:
+\begin{align}\label{eq:improved_zeroOrderPot_withPhi6}
+ U(m_{\Phi}, s_{\Phi}) &= -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
+                         + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
+         \nonumber \\
+                        & + \hat\lambda_6 \left( m_{\Phi}^6 + s_{\Phi}^6 + 15 \left( m_{\Phi}^4 s_{\Phi}^2 + m_{\Phi}^2 s_{\Phi}^4 \right)   \right)
+         \nonumber \\
+                        & -\frac{2N_f}{V} \sum\limits_p \log
+                                    \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
+                                    \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+         \nonumber \right. \\
+                        & \left. +  m_{\Phi}^2 \hat y^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right]
+         \nonumber \\
+                        & - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+          \log\left( 2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) 
+                     + \hat\lambda_6\left( 18 \left( m_{\Phi}^4 + s_{\Phi}^4 \right)  + 108\,  m_{\Phi}^2 s_{\Phi}^2 \right) \right)
+\end{align}
+
+The expression with the reparametrizations \eqref{eq:def_reparametrization_couplingsAndMagnetization_Nf} and \eqref{eq:lambda_6_reparametrized} for the rescaled potential
+$\tilde{U}=U/N_f$ is straight foward. 
+\begin{align}\label{eq:improved_zeroOrderPot_withPhi6_rescaled}
+ \tilde U(\breve m_{\Phi}, \breve s_{\Phi}) &= -8 \kappa \left( \breve m_{\Phi}^2 - \breve s_{\Phi}^2 \right)   +   \left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right)
+                         + \lambda_N \left( \breve m_{\Phi}^4 + \breve s_{\Phi}^4 + 6 \breve m_{\Phi}^2 \breve s_{\Phi}^2 
+                         - 2  \left(\breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) \right) 
+         \nonumber \\
+                        & + \lambda_{6N} \left( \breve m_{\Phi}^6 + \breve s_{\Phi}^6 + 15 \left( \breve m_{\Phi}^4 \breve s_{\Phi}^2 
+                          + \breve m_{\Phi}^2 \breve s_{\Phi}^4 \right)   \right)
+         \nonumber \\
+                        & -\frac{2}{V} \sum\limits_p \log
+                                    \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
+                                    \hat y^2_N \left( \breve m_{\Phi}^2 - \breve s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
+         \nonumber \right. \\
+                        & \left. +  \breve m_{\Phi}^2 y^2_N \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right]
+         \nonumber \\
+                        & - \frac{1}{2VN_f}\sum\limits_{0 \neq p \neq p_s} 
+          \log\left( 2 - 4 \lambda_N - 4 \kappa \sum_{\mu} \cos(p_{\mu}) + 8 \lambda_N \left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2  \right) 
+                     +  18\,\lambda_{6N} \left( \breve m_{\Phi}^4 + \breve s_{\Phi}^4 +6\, \breve  m_{\Phi}^2 \breve s_{\Phi}^2 \right) \right)
+\end{align}
+
+
+
+
+
 

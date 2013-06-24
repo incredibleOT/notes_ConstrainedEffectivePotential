@@ -11,7 +11,7 @@ The decomposition of the bosonic part is:
  S_{B,0}      &= \frac{1}{2}  \sum\limits_{0\neq p \neq p_s}  \tilde\Phi_p^{\dagger}  
               \left[ 2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right]  \tilde\Phi_p ,
               \label{eq:BosonicGaussianCEP} \\
- S_I        &= \frac{\hat\lambda}{V} \hat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
+ S_I        &= \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
               \label{eq:BosonicInteractionCEP}
 \end{align}
 with $\hat\sum$ meaning, that at leas one of the summed momenta is not in $\{0,p_s\}$. For the prefactor ($6 m_{\Phi}^2s_{\Phi}^2$) in the treelevel 
@@ -37,7 +37,7 @@ If one expands the exponential from $S_{B,I}$ to first order, the integral in \e
 \begin{align}\label{eq:CEP_firstOrder}
  \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right]   
                       e^{-S_{I}[\Phi] +  S_{B,0}[\Phi]} =& \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right] 
-                      \left( 1 - \frac{\hat\lambda}{V} \hat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} 
+                      \left( 1 - \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} 
                       \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s \right)e^{-S_B,0} \nonumber \\
                       =& \sqrt{\frac{V}{\det \mathcal{B}}} \cdot \left(1 - \frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right) \right) \nonumber \\
                       =& \sqrt{\frac{V}{\det \mathcal{B}}} \cdot e^{-\frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right)}
@@ -61,7 +61,7 @@ and gives some kind of vacuum bubble which is independent of zero or staggered m
 and will therefore be neglected here.
 The other two contributions in the exponantial origin from those terms in the sum, where some (but not all) occuring momenta are either $0$ or $p_s$:
 \begin{align}\label{eq:CEP_firstOrderLambda_zeroModeContribution}
- C_{p,m}=& \hat{\sum\limits_{p,q}} \left( 
+ C_{p,m}=& \widehat{\sum\limits_{p,q}} \left( 
              \contraction{}{\Phi}{{}_p^{\dagger}}{\Phi}                              \Phi_p^{\dagger} \Phi_q \Phi_0^{\dagger} \Phi_0
            + \contraction{}{\Phi}{{}_p^{\dagger} \Phi_0 \Phi_0^{\dagger}}{\Phi}      \Phi_p^{\dagger} \Phi_0 \Phi_0^{\dagger} \Phi_q
            + \contraction{\Phi_0^{\dagger} }{\Phi}{{}_p}{\Phi}                       \Phi_0^{\dagger} \Phi_p \Phi_q^{\dagger} \Phi_0

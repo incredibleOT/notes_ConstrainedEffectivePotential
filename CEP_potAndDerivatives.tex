@@ -1,126 +1,155 @@
-Here I just summerize the potential and it's derivatives for future use. Starting point is the expression \eqref{eq:improved_zeroOrderPot}
+Here I just summerize the potential and it's derivatives for future use. Starting point is the expression \eqref{eq:improved_zeroOrderPot_withPhi6}
 \begin{align}\label{eq:CEP_shortCut}
- U(m_{\Phi}, s_{\Phi}) =& U^{\text{tree}}(m_{\Phi}, s_{\Phi}) + U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) + U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) 
+ U(m_{\Phi}, s_{\Phi}) &= U^{\text{tree}}(m_{\Phi}, s_{\Phi}) + U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) + U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) 
               \\ \label{CEP_treeLevel}
- U^{\text{tree}}(m_{\Phi}, s_{\Phi}) =& -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
+ U^{\text{tree}}(m_{\Phi}, s_{\Phi}) &= -8 \kappa \left( m_{\Phi}^2 - s_{\Phi}^2 \right)   +   \left( m_{\Phi}^2 + s_{\Phi}^2 \right)
                          + \hat\lambda \left( m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2 - 2 N_f \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right) 
+              \nonumber \\
+                         & + \hat\lambda_6 \left( m_{\Phi}^6 + s_{\Phi}^6 + 15 \left( m_{\Phi}^4 s_{\Phi}^2 + m_{\Phi}^2 s_{\Phi}^4 \right)   \right)
               \\ \label{eq:CEP_ferionicContribution}
- U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \sum\limits_p \log
+ U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \sum\limits_p \log
                                     \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
                                     \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) g_p\right)^2 
                                               \nonumber \right. \\ 
                         & \left. +  m_{\Phi}^2 \hat y^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right] 
                                               \\ \label{eq:CEP_bosonicDeterminantContribution}
- U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) =& - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
-          \log\left( 2 - 4 \hat\lambda N_f + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right)
+ U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) &= - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+                        \log\Bigl( 2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) 
+%            \nonumber \\
+                        + 18\, \hat\lambda_6\left( m_{\Phi}^4 + s_{\Phi}^4 + 6\,  m_{\Phi}^2 s_{\Phi}^2 \right)\Bigr)
 \end{align}
 
 In the follwoing the 1st and 2nd derivatives w.r.t.\ $m_{\Phi}$ and $s_{\Phi}$ are given. First the tree-level:
 \begin{align}\label{CEP_derivative_dm_treeLevel}
- \frac{\partial}{\partial m_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})=&
+ \frac{\partial}{\partial m_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})&=
                     -16 \kappa m_{\Phi} + 2 m_{\Phi} + \hat\lambda \left( 4 m_{\Phi}^3 + 12 m_{\Phi} s_{\Phi}^2 -4 N_f  m_{\Phi} \right)
+                    \nonumber \\
+                    & + \hat\lambda_6\left( 30 m_{\Phi}^5 + 60 m_{\Phi}^3 s_{\Phi}^2 + 30 m_{\Phi} s_{\Phi}^4 \right)
                     \\ \label{eq:CEP_derivative_ds_treeLevel}
- \frac{\partial}{\partial s_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})=&
+ \frac{\partial}{\partial s_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})&=
                     +16 \kappa s_{\Phi} + 2 s_{\Phi} + \hat\lambda \left( 4 s_{\Phi}^3 + 12 m_{\Phi}^2 s_{\Phi} -4 N_f  s_{\Phi} \right)
+                    \nonumber \\
+                    & + \hat\lambda_6\left( 30 s_{\Phi}^5 + 30 m_{\Phi}^4 s_{\Phi} + 60 m_{\Phi}^2 s_{\Phi}^3 \right)
                     \\ \label{eq:CEP_derivative_dmdm_treeLevel}
- \frac{\partial^2}{\partial m_{\Phi}^2}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})=&
+ \frac{\partial^2}{\partial m_{\Phi}^2}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})&=
                     -16 \kappa  + 2 + \hat\lambda \left( 12 m_{\Phi}^2 + 12 s_{\Phi}^2 - 4 N_f \right)
+                    + \hat\lambda_6 \left( 30m_{\Phi}^4 + 180 m_{\Phi}^2 s_{\Phi}^2 + 30 s_{\Phi}^4 \right)
                     \\ \label{eq:CEP_derivative_dsds_treeLevel}
- \frac{\partial^2}{\partial s_{\Phi}^2}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})=&
+ \frac{\partial^2}{\partial s_{\Phi}^2}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})&=
                     +16 \kappa  + 2 + \hat\lambda \left( 12 s_{\Phi}^2 + 12 m_{\Phi}^2 - 4 N_f \right)
+                    + \hat\lambda_6 \left( 30m_{\Phi}^4 + 180 m_{\Phi}^2 s_{\Phi}^2 + 30 s_{\Phi}^4 \right)
  \\ \label{eq:CEP_derivative_dmds_treeLevel}
- \frac{\partial^2}{\partial m_{\Phi} \partial s_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})=&
+ \frac{\partial^2}{\partial m_{\Phi} \partial s_{\Phi}}  U^{\text{tree}}(m_{\Phi}, s_{\Phi})&=
                     \hat\lambda \left( 24 m_{\Phi} s_{\Phi} \right) 
+                    + \hat\lambda_6 \left( 120 \left( m_{\Phi}^3 s_{\Phi} + m_{\Phi} s_{\Phi}^3 \right) \right)
 \end{align}
 
 For the derivatives of the fermionic contributions some shortcuts will be used:
 \begin{align}\label{eq:CEP_ferionicContribution_shortcuts}
- U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \sum\limits_p \log\left[{A_p^{m, s}}\right],
+ U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \sum\limits_p \log\left[{A_p^{m, s}}\right],
                     \\ \label{eq:CEP_ferionicContribution_shortcuts_A}
- {A_p^{m, s}} =& {a_p^{m,s}}^2 +  m_{\Phi}^2 \hat y^2 \cdot b_p^2 ,
+ {A_p^{m, s}} &= {a_p^{m,s}}^2 +  m_{\Phi}^2 \hat y^2 \cdot b_p^2 ,
                     \\ \label{eq:CEP_ferionicContribution_shortcuts_a}
- {a_p^{m,s}} =& |\nu^+(p)| |\nu^+(\wp)|   +   \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|,
+ {a_p^{m,s}} &= |\nu^+(p)| |\nu^+(\wp)|   +   \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|,
                     \\ \label{eq:CEP_ferionicContribution_shortcuts_b}
- b_p                     =& |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)|, 
+ b_p                     &= |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)|, 
                     \\ \label{eq:CEP_ferionicContribution_shortcuts_g}
- g_p                     =&  |\gamma^+(p)| |\gamma^+(\wp)|
+ g_p                     &=  |\gamma^+(p)| |\gamma^+(\wp)|
 \end{align}
 so tht the they can be written in a more compact form:
 \begin{align}\label{eq:CEP_derivative_dm_fermionicContribution}
- \frac{\partial }{\partial m_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \sum\limits_p
+ \frac{\partial }{\partial m_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \sum\limits_p
                    \frac{4 m_{\Phi} \hat y^2 \cdot g_p \cdot {a_p^{m,s}}   +   2 m_{\Phi} \hat y^2 \cdot b_p^2}
                    { {A_p^{m, s}} } 
        \nonumber \\
 %                    
-            =& -\frac{2N_f}{V} \cdot 2 m_{\Phi} \hat y^2 \cdot \sum\limits_p 
+            &= -\frac{2N_f}{V} \cdot 2 m_{\Phi} \hat y^2 \cdot \sum\limits_p 
                    \frac{2 \cdot g_p \cdot {a_p^{m,s}} + b_p^2}{ {A_p^{m, s}} }
 \end{align} 
 \begin{align}\label{eq:CEP_derivative_ds_fermionicContribution}
- \frac{\partial }{\partial s_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \sum\limits_p
+ \frac{\partial }{\partial s_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \sum\limits_p
                    \frac{- 4 s_{\Phi} \hat y^2 \cdot g_p \cdot {a_p^{m,s}} }
                    { {A_p^{m, s}} } 
        \nonumber \\
 %                    
-            =& -\frac{2N_f}{V} \cdot \left( -4 s_{\Phi} \hat y^2\right) \cdot \sum\limits_p 
+            &= -\frac{2N_f}{V} \cdot \left( -4 s_{\Phi} \hat y^2\right) \cdot \sum\limits_p 
                    \frac{ g_p \cdot {a_p^{m,s}} }{ {A_p^{m, s}} }
 \end{align} 
 \begin{align}\label{eq:CEP_derivative_dmdm_fermionicContribution}        
- \frac{\partial^2 }{\partial m_{\Phi}^2} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \cdot 2 \hat y^2 \sum\limits_p
+ \frac{\partial^2 }{\partial m_{\Phi}^2} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \cdot 2 \hat y^2 \sum\limits_p
                    \left[ \frac{2 \cdot g_p \cdot {a_p^{m,s}} + b_p^2}{ {A_p^{m, s}} } 
-                   + m_{\Phi} \cdot \frac{   4 m_{\Phi} \cdot  \left(g_p\right)^2    }{{A_p^{m, s}} } \right.
+                   + m_{\Phi} \cdot \frac{   4 m_{\Phi} \hat y^2 \cdot  \left(g_p\right)^2    }{{A_p^{m, s}} } \right.
        \nonumber  \\
 %                    
                   &- \left. m_{\Phi} \cdot \frac{ 2 m_{\Phi} \hat y^2 \cdot \left(2 \cdot g_p \cdot {a_p^{m,s}} + b_p^2 \right)^2 }
                     { {A_p^{m, s}}^2 } \right]
        \nonumber \\
 %                     
-             =& -\frac{2N_f}{V} \cdot 2 \hat y^2 \sum\limits_p 
+             &= -\frac{2N_f}{V} \cdot 2 \hat y^2 \sum\limits_p 
                 \left[ \frac{  2 \cdot g_p \cdot {a_p^{m,s}} + b_p^2   }{ {A_p^{m, s}} } 
                   \cdot \left( 1 - \frac{2m_{\Phi}^2 \hat y ^2}{ {A_p^{m, s}} }  \right) 
-                  + \frac{   4 m_{\Phi}^2 \cdot g_p^2    }{{A_p^{m, s}} }\right]
+                  + \frac{   4 m_{\Phi}^2 \hat y ^2 \cdot g_p^2    }{{A_p^{m, s}} }\right]
 \end{align} 
 \begin{align} \label{eq:CEP_derivative_dsds_fermionicContribution}
- \frac{\partial^2 }{\partial s_{\Phi}^2} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \cdot (-4 \hat y^2) \sum\limits_p
+ \frac{\partial^2 }{\partial s_{\Phi}^2} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \cdot (-4 \hat y^2) \sum\limits_p
                 \left[ \frac{g_p \cdot {a_p^{m,s}} }{ {A_p^{m, s}} } 
                 + s_{\Phi} \frac{ -2 s_{\Phi} \hat y^2 \cdot g_p^2}{ {A_p^{m, s}} }
                 - s_{\Phi} \frac{ -4 s_{\Phi} \hat y^2 \cdot \left( g_p \cdot {a_p^{m,s}} \right)^2 }{ {A_p^{m, s}}^2 } \right]
       \nonumber \\
-               =& -\frac{2N_f}{V} \cdot (-4 \hat y^2) \sum\limits_p 
+               &= -\frac{2N_f}{V} \cdot (-4 \hat y^2) \sum\limits_p 
                   \left[ \frac{g_p}{ {A_p^{m, s}} }\cdot \left( {a_p^{m,s}} + 2 s_{\Phi}^2 \hat y ^2 g_p 
                   \cdot \left( \frac{ 2 \cdot {a_p^{m,s}}^2}{  {A_p^{m, s}} } - 1 \right) \right) \right]
 \end{align}
 \begin{align} \label{eq:CEP_derivative_dmds_fermionicContribution}
- \frac{\partial^2 }{\partial m_{\Phi} \partial s_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) =& -\frac{2N_f}{V} \cdot (-4 s_{\Phi}\hat y^2) \sum\limits_p
+ \frac{\partial^2 }{\partial m_{\Phi} \partial s_{\Phi}} U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \cdot (-4 s_{\Phi}\hat y^2) \sum\limits_p
                    \left[ \frac{ 2 m_{\Phi} \hat y^2 g_p^2}{ {A_p^{m, s}} } \right. 
       \nonumber \\
                  & -\left. \frac{ 2 m_{\Phi} \hat y^2 \cdot g_p \cdot {a_p^{m,s}} \cdot \left( 2 \cdot g_p\cdot {a_p^{m,s}} + b_p^2 \right)}
                      { {A_p^{m, s}}^2 } \right] 
       \nonumber \\
-                =& -\frac{2N_f}{V} \cdot (-8 m_{\Phi} s_{\Phi}\hat y^4) \sum\limits_p 
+                &= -\frac{2N_f}{V} \cdot (-8 m_{\Phi} s_{\Phi}\hat y^4) \sum\limits_p 
                     \left[ \frac{g_p}{ {A_p^{m, s}}^2 } \cdot \left( g_p  
                     - \frac{ {a_p^{m,s}} \cdot \left( 2 \cdot g_p\cdot {a_p^{m,s}} + b_p^2 \right)}
                      { {A_p^{m, s}} }\right) \right] 
 \end{align}
 
-The part for the part coming from the bosonic determinant the shortcut:
+For the part coming from the bosonic determinant I use the shortcut:
  \begin{align}\label{eq:CEP_bosonicDeterminantContribution_shortcut}
-  U^{\text{BosDet}}(m_{\Phi},s_{\Phi}) =& - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} \log \left[ C_p + 8 \hat \lambda \left(m_{\Phi}^2 + s_{\Phi}^2 \right) \right]
+  U^{\text{BosDet}}(m_{\Phi},s_{\Phi}) &= - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} \log \left[ D_p^{m,s} \right]
        \nonumber \\
-   C_p                                 =&  2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}).
+   D_p^{m,s}                                 &=  2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) + 8\, \hat \lambda \left(m_{\Phi}^2 + s_{\Phi}^2 \right) 
+                                        + 18\, \hat\lambda_6\left( m_{\Phi}^4 + s_{\Phi}^4 + 6\,  m_{\Phi}^2 s_{\Phi}^2 \right).
  \end{align}
 Since $U^{\text{BosDet}}$ is completely symmetric in $m_{\Phi}$ and $s_{\Phi}$, so I'll only write the ones w.r.t.\ $m_{\Phi}$:
 \begin{align}\label{eq:CEP_derivative_dm_bosonicContribution}
- \frac{\partial }{\partial m_{\Phi}} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) =& - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
-                   \left[  \frac{16 \hat\lambda  m_{\Phi} }{ C_p + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) }  \right]
+ \frac{\partial }{\partial m_{\Phi}} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) &= - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+                   \left[  \frac{16\, \hat\lambda\,  m_{\Phi}  + 72\,\hat\lambda_6 \left( m_{\Phi}^3 + 3\, m_{\Phi} s_{\Phi}^2 \right) }
+                   { D_p^{m,s} }  \right]
        \\ \label{eq:CEP_derivative_dmdm_bosonicContribution}
 %        
- \frac{\partial^2 }{\partial m_{\Phi}^2} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) =& - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
-                   \left[  \frac{16 \hat\lambda }{ C_p + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) }
-                   - \left( \frac{16 \hat\lambda m_{\Phi} }{ C_p + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) } \right)^2    \right]
+ \frac{\partial^2 }{\partial m_{\Phi}^2} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) &= - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+                   \left[  \frac{16\, \hat\lambda + 216\,\hat\lambda_6\left( m_{\Phi}^2 + s_{\Phi}^2 \right) }{ D_p^{m,s} }
+                   - \left( \frac{16\, \hat\lambda\, m_{\Phi}  + 72\,\hat\lambda_6 \left( m_{\Phi}^3 + 3\, m_{\Phi} s_{\Phi}^2 \right)}{D_p^{m,s} } \right)^2    \right]
               \\ \label{eq:CEP_derivative_dmds_bosonicContribution}
 %               
- \frac{\partial^2 }{\partial m_{\Phi}\partial s_{\Phi}} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) =& - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
-                   \left[ - \frac{16^2 \hat\lambda^2 m_{\Phi} s_{\Phi} }{\left( C_p + 8 \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right)  \right)^2 }  \right]
+ \frac{\partial^2 }{\partial m_{\Phi}\partial s_{\Phi}} U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) &= - \frac{1}{2V}\sum\limits_{0 \neq p \neq p_s} 
+                   \left[ \frac{432\, \hat\lambda_6\, m_{\Phi} s_{\Phi} }{ D_p^{m,s} } \right.
+        \nonumber \\
+                   & - \left.\frac{\left(16\, \hat\lambda\,  m_{\Phi}  + 72\,\hat\lambda_6 \left( m_{\Phi}^3 + 3\, m_{\Phi} s_{\Phi}^2 \right) \right)
+                    \cdot \left(16\, \hat\lambda\,  s_{\Phi}  + 72\,\hat\lambda_6 \left( s_{\Phi}^3 + 3\, m_{\Phi}^2 s_{\Phi} \right) \right) }
+                    { {D_p^{m,s}}^2 }  \right]
 \end{align}
+
+The corresponding expression for the rescaled potential are easily obtained by noting that:
+\begin{equation}\label{eq:derivativesOfRescaledPotential}
+ \frac{\partial \tilde U}{\partial \breve m_{\Phi}} = \frac{1}{\sqrt{N_f}}\frac{\partial U}{\partial m_{\Phi}},\qquad
+ \frac{\partial^2 \tilde U}{\partial \breve m_{\Phi}^2} = \frac{\partial^2 U}{\partial m_{\Phi}^2}.
+\end{equation}
+Explicitly, for the three parts, to get the expressions, just exchange the couplings by their rescaled counterparts and
+\begin{itemize}
+ \item For $U^{\text{tree}}$, remove the explicit appearence of $N_f$,
+ \item for $U^{\text{ferm}}$, remove the $N_f$ in the numerator n front of the sum,
+ \item for $U^{\text{BosDet}}$, add a factor of $N_f^{-1}$ in front of the sum.
+\end{itemize}
 
 
