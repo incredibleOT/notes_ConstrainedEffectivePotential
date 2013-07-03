@@ -8,7 +8,7 @@
 \usepackage{subfig}	%2 grafiken nebeneinander	
 \usepackage{multirow}	% mehrreihige Tabelleneintraege
 \usepackage{slashed}   %for dirac-slash
-\usepackage{simplewick}
+\usepackage{simplewick}   %for wick contractios
 \usepackage{url}
 \usepackage{hyperref}
 %%%to fight the ''Package hyperref Warning: bookmark level for unknown Chapter defaults to 0.''-warning
@@ -32,7 +32,7 @@
 \section{General approach}
 \input{CEP_approach.tex}
 %
-\clearpage1
+\clearpage
 %
 \section{Expansion of the action}
 \input{CEP_expansion.tex}
@@ -54,8 +54,18 @@
 %
 \clearpage
 %
+\section{\texorpdfstring{First order in $\hat\lambda$ and $\hat\lambda_6$}{First order in lambda and lambda6}}
+\input{CEP_firstOrderWithDet.tex}
+%
+\clearpage
+%
 \section{The potential and its derivatives}
 \input{CEP_potAndDerivatives.tex}
+%
+\clearpage
+%
+\section{The potential and its derivatives in the rescaled formulation}
+\input{CEP_potAndDerivatives_rescaled.tex}
 %
 \clearpage
 %

@@ -1,0 +1,105 @@
+Here I want do add the first order in $\hat\lambda$ and $\hat\lambda_6$ with the inclusion of the bosonic determinant as 
+discussed in~\ref{ch:alternativeExpansion}.
+In that case, the bosonic interaction part of the action is given by (collecting the necessary parts of eq.~\eqref{eq:alternative_decomposition_of_phi4_term}
+and~\eqref{eq:alternative_decomposition_of_phi6_term}):
+\begin{align}\label{eq:BosonicInteractionCEP_withDetAndLambda6}
+ S_{B,I}  & = \frac{\hat\lambda}{V} \widetilde{\sum\limits_{p_1 \dots p_4}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s
+     \nonumber \\
+          & + \frac{\hat\lambda_6}{V} \left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)\widetilde{\sum\limits_{p_1,\dots p4}} \delta_{p_1 + p_3, p_2 + p_4 } 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4}
+            + \frac{\hat\lambda_6}{V^2}\widetilde{\sum\limits_{p_1,\dots p6}} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6}
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6},
+     \nonumber \\
+          & = \frac{\hat\lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)}{V} \widetilde{\sum\limits_{p_1,\dots p4}} \delta_{p_1 + p_3, p_2 + p_4 } 
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} 
+     \nonumber \\
+          & + \frac{\hat\lambda_6}{V^2}\widetilde{\sum\limits_{p_1,\dots p6}} \delta_{p_1 + p_3 + p_5, p_2 + p_4 + p_6}
+                     \tilde\Phi_{p_1}^{\dagger} \tilde\Phi_{p_2} \tilde\Phi_{p_3}^{\dagger} \tilde\Phi_{p_4} \tilde\Phi_{p_5}^{\dagger} \tilde\Phi_{p_6}.
+\end{align}
+As a reminder: The tilde above the sum indicates, that none of the momenta in the sum is the zero or staggered mode. 
+The contraction of the scalar fields is given by:
+\begin{equation}\label{eq:ContractionOfBosonicField_withDetAndLambda6}
+ \contraction{}{\Phi}{{}^\dagger_p}{\Phi{}}  \Phi^\dagger_p \Phi_q = \frac{4 \cdot \delta_{p,q}}
+                   {2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) 
+                   + 8 \, \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) 
+                   + 18\, \hat\lambda_6\left( m_{\Phi}^4 + s_{\Phi}^4 + 6\,  m_{\Phi}^2 s_{\Phi}^2 \right) }.
+\end{equation}
+To clean the notation a little bit, the propagator sum will now be given by:
+\begin{equation}\label{eq:bosonicPropagatorSum_CEP_withDetAndLambda6}
+ \tilde P_B \equiv \frac{1}{V}\sum\limits_{0\neq p\neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) 
+                   + 8\,  \hat\lambda \left( m_{\Phi}^2 + s_{\Phi}^2  \right) 
+                   + 18\, \hat\lambda_6\left( m_{\Phi}^4 + s_{\Phi}^4 + 6\,  m_{\Phi}^2 s_{\Phi}^2 \right)}.
+\end{equation}
+If one now repeats the steps leading to \eqref{eq:CEP_firstOrder}, one finds:
+\begin{align}\label{eq:CEP_firstOrder_withDetAndLambda6}
+ \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right]   
+                      e^{-S_{B,I}[\Phi] +  S_{B,0}[\Phi]} 
+                      = & \sqrt{\frac{V}{\det \mathcal{B}}} \cdot 
+                        \left(1 - \frac{\hat\lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)}{V}\left( \tilde C_{p,q} \right) 
+                        - \frac{\hat\lambda_6}{V^2} \left( \tilde C_{p,q,r} \right) \right)
+          \nonumber \\
+                      = & \sqrt{\frac{V}{\det \mathcal{B}}} 
+                        \cdot e^{\left\{ \frac{\hat\lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)}{V}\left( \tilde C_{p,q} \right) 
+                        - \frac{\hat\lambda_6}{V^2} \left( \tilde C_{p,q,r} \right) \right\} }.
+\end{align}
+The $\tilde C$ are given by:
+\begin{align}\label{eq:CEP_firstOrder_twoLoop_withDetAndLambda_6}
+ \tilde C_{p,q} & = \widetilde{\sum\limits_{p,q}} \left( 
+                     \contraction{}{\tilde\Phi}{{}_{p}^{\dagger}}{\tilde\Phi}
+                     \contraction{\tilde\Phi_{p}^{\dagger} \tilde\Phi_{p}}{\tilde\Phi}{{}_{q}^{\dagger}}{\tilde\Phi}
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{q} 
+                   + \contraction{}{\tilde\Phi}{^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} }{\tilde\Phi}
+                     \bcontraction{\tilde\Phi_{p}^{\dagger}}{\tilde\Phi}{{}_{q}}{\tilde\Phi}
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p}
+                     \right) 
+        \nonumber \\
+                & = 8\, V^2\, \tilde P_B^2,
+        \\\label{eq:CEP_firstOrder_threeLoop_withDetAndLambda_6}
+ \tilde C_{p,q,r} & = \widetilde{\sum\limits_{p,q,r}} \left( 
+                     %pp qq rr
+                     \contraction{}{ \tilde\Phi}{{}_{p}^{\dagger} }{\tilde\Phi}
+                     \contraction{\tilde\Phi_{p}^{\dagger} \tilde\Phi_{p}}{ \tilde\Phi}{{}_{q}^{\dagger} }{\tilde\Phi}
+                     \contraction{\tilde\Phi_{p}^{\dagger} \tilde\Phi_{p}\tilde\Phi_{q}^{\dagger} \tilde\Phi_{q}}{ \tilde\Phi}{{}_{r}^{\dagger} }{\tilde\Phi}
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} 
+                     % pp qr rq
+                   + \contraction{}{ \tilde\Phi}{ {}_{p}^{\dagger} }{ \tilde\Phi }
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{p} }{ \tilde\Phi }{ {}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{r}^{\dagger} }{\tilde\Phi }
+                     \contraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} }{ \tilde\Phi }{ {}_{r} }{ \tilde \Phi }
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{q} 
+%                      % pq qp rr
+                   + \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} }{\tilde\Phi}
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} }{ \tilde\Phi }{ {}_{q} }{\tilde \Phi}
+                     \contraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p} }{ \tilde\Phi }{ {}_{r}^{\dagger} }{ \tilde\Phi }
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \right.
+        \nonumber \\ 
+                       % pq rp qr 
+           & +\left. \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} }{ \tilde \Phi}
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} }{ \tilde\Phi }{ {}_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{p} }{ \tilde\Phi }
+                     \contraction[2ex]{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} }{ \tilde\Phi }{ {}_{r}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} }{ \tilde\Phi} 
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{p} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{r}
+                      % pq qr rp
+                   + \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{r}^{\dagger} }{ \tilde\Phi}
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} }{ \tilde\Phi }{ {}_{q} }{ \tilde\Phi }
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} }{ \tilde\Phi }{ {}_{r} }{ \tilde\Phi}
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{p}
+                      % pq rr qp
+                     \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{q}^{\dagger} }{ \tilde \Phi }
+                     \contraction[2ex]{ \tilde\Phi_{p}^{\dagger} }{ \tilde\Phi }{ {}_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} }{\tilde \Phi}
+                     \bcontraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} }{ \tilde\Phi }{ {}_{r}^{\dagger} }{ \tilde\Phi }
+                     \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p}
+                     \right)
+        \nonumber \\
+                 & = 24\, V^3\, \tilde P_B^3.
+\end{align}
+If one also includes the contribution coming fro the first order in $\hat\lambda$ and $\hat\lambda_6$ to the CEP \eqref{eq:improved_zeroOrderPot_withPhi6} 
+or~\eqref{eq:improved_zeroOrderPot_withPhi6_rescaled}the potential
+changes to:
+\begin{align}\label{eq:CEP_oneLoopAddition_withDetAndLambda6}
+ U(m_{\Phi}, s_{\Phi}) & \rightarrow U(m_{\Phi}, s_{\Phi}) + 8\,\left(\hat \lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right) \right) \tilde P_B^2
+                        + 24\, \hat\lambda_6 \tilde P_B^3,
+      \\ \label{eq:CEP_oneLoopAddition_withDetAndLambda6_rescaled}
+ \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) & \rightarrow  
+       \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) + 
+                        8\,\left( \frac{\lambda_N}{N_f} + \frac{\lambda_{6N}}{N_f^2}\left( 9\left( \breve{m}_{\Phi}^2 + \breve{s}_{\Phi}^2 \right) \right) \right) \tilde P_B^2
+                        + 24\, \frac{\lambda_{6N}}{N_f^2} \tilde P_B^3.
+\end{align}

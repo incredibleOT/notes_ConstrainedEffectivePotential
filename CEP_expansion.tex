@@ -11,7 +11,7 @@ The decomposition of the bosonic part is:
  S_{B,0}      &= \frac{1}{2}  \sum\limits_{0\neq p \neq p_s}  \tilde\Phi_p^{\dagger}  
               \left[ 2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu}) \right]  \tilde\Phi_p ,
               \label{eq:BosonicGaussianCEP} \\
- S_I        &= \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
+ S_{B,I}        &= \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s,
               \label{eq:BosonicInteractionCEP}
 \end{align}
 with $\hat\sum$ meaning, that at leas one of the summed momenta is not in $\{0,p_s\}$. For the prefactor ($6 m_{\Phi}^2s_{\Phi}^2$) in the treelevel 
@@ -29,14 +29,14 @@ For the exponential of the CEP we can write now (including the fermionic Part, t
 \begin{equation} \label{eq:expandedCEP}
  e^{-V\cdot U(m,s)} = e^{-S_{B,\Phi^g}[\Phi^g]} e^{-N_f \log \det \mathcal{M}[\Phi^g]} 
                       \int \left. \left[\prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right]   
-                      e^{-S_{I}[\Phi] +  S_{B,0}[\Phi]}
+                      e^{-S_{B,I}[\Phi] +  S_{B,0}[\Phi]}
                        \right|_{ \begin{array}{l} \scriptscriptstyle \tilde \Phi_0=\sqrt{V} m_{\Phi} \\ 
                                      \scriptscriptstyle \tilde \Phi_{p_s}=\sqrt{V}s_{\Phi} \end{array}},
 \end{equation}
 If one expands the exponential from $S_{B,I}$ to first order, the integral in \eqref{eq:expandedCEP} we end up with:
 \begin{align}\label{eq:CEP_firstOrder}
  \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right]   
-                      e^{-S_{I}[\Phi] +  S_{B,0}[\Phi]} =& \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right] 
+                      e^{-S_{B,I}[\Phi] +  S_{B,0}[\Phi]} =& \int \left[ \prod\limits_{0 \neq p \neq p_s}  d \tilde \Phi_p \right] 
                       \left( 1 - \frac{\hat\lambda}{V} \widehat{\sum\limits_{p,q,r,s}}\delta_{p+r,q+s} 
                       \tilde\Phi_p^{\dagger} \tilde\Phi_q \tilde\Phi_r^{\dagger} \tilde\Phi_s \right)e^{-S_B,0} \nonumber \\
                       =& \sqrt{\frac{V}{\det \mathcal{B}}} \cdot \left(1 - \frac{\hat\lambda}{V} \left( C_{p,q} + C_{m,p} + C_{s,p} \right) \right) \nonumber \\
@@ -75,4 +75,5 @@ For later use, the propagator sum will be defined:
 \begin{equation}\label{eq:bosonicPropagatorSum_CEP}
  P_B \equiv \frac{1}{V}\sum\limits_{0\neq p\neq p_s} \frac{1}{2 - 4 \hat\lambda N_f - 4 \kappa \sum_{\mu} \cos(p_{\mu})}.
 \end{equation}
+
 
