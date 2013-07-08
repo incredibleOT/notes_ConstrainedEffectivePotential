@@ -1,7 +1,7 @@
 To get rid of some confusion, I will here write the corresponding equations to those from \ref{ch:potAndDerivatives} with the 
 reparametrizations~\eqref{eq:def_reparametrization_couplingsAndMagnetization_Nf} and~\eqref{eq:lambda_6_reparametrized} included. The potential itself is then given by:
 \begin{align}\label{eq:CEP_shortCut_rescaled}
- U(\breve m_{\Phi}, \breve s_{\Phi}) &= 
+ \tilde U(\breve m_{\Phi}, \breve s_{\Phi}) &= 
                             \tilde U^{\text{tree}}(\breve m_{\Phi}, \breve s_{\Phi}) + \tilde U^{\text{ferm}}(\breve m_{\Phi}, \breve s_{\Phi})
                           + \tilde U^{\text{BosDet}}(\breve m_{\Phi}, \breve s_{\Phi}) + \tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi})
 %                           
@@ -31,8 +31,8 @@ reparametrizations~\eqref{eq:def_reparametrization_couplingsAndMagnetization_Nf}
 %                           
                \\ \label{eq:CEP_bosonicFirstOrderContribution_rescaled}
  \tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi}) & = 
-                            8\,\left(\frac{\lambda_N}{N_f} + \frac{\lambda_{6N}}{N_f^2}\left( 
-                            9\left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) \right) \right) \tilde P_B^2 + 24\,\frac{\lambda_{6N}}{N_f^2} \tilde P_B^3,
+                            \frac{8}{N_f^2} \left( \lambda_N + \lambda_{6N} \left( 
+                            9 \left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) \right) \right) \tilde P_B^2 + 24\,\frac{\lambda_{6N}}{N_f^3} \tilde P_B^3,
 \end{align}
 
 
@@ -83,7 +83,7 @@ For $b_p$ and $g_p$ nothing changes at all.
 % 
 \begin{align}\label{eq:CEP_derivative_dm_fermionicContribution_rescaled}
  \partial_{\breve m_{\Phi}}  \tilde U^{\text{ferm}}(\breve m_{\Phi}, \breve s_{\Phi}) & =
-                                -\frac{2N_f}{V} \sum\limits_p \frac{4 \breve m_{\Phi} \hat y^2 \cdot g_p \cdot {a_p^{m,s}}  
+                                -\frac{2}{V} \sum\limits_p \frac{4 \breve m_{\Phi} \hat y^2 \cdot g_p \cdot {a_p^{m,s}}  
                                 +  2 \breve m_{\Phi} \hat y^2 \cdot b_p^2} { {A_p^{m, s}} } 
        \nonumber \\
                               & = - \frac{2}{V} \cdot 2 \breve m_{\Phi} \hat y^2 \cdot \sum\limits_p 
@@ -183,7 +183,7 @@ Here some factors of $N_f$ appear:
  \tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi}) & \equiv \tilde \alpha^{m, s}\, \tilde P_B^2 + \tilde \beta\, \tilde P_B^3,
 %  
         \\ \label{CE:CEP_firstWithDet_shrotcut_alpha_rescaled}
- \tilde \alpha^{m, s}  & = 8 \left(\frac{\lambda_N}{N_f} + \frac{\lambda_{6N}}{N_f^2}\left( 9\left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) \right) \right)
+ \tilde \alpha^{m, s}  & = \frac{8}{N_f^2} \left(\lambda_N + \lambda_{6N}\left( 9\left( \breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) \right) \right)
 %  
         \\ \label{CE:CEP_firstWithDet_shrotcut_dm_alpha_rescaled}
  \partial_{\breve m_{\Phi}} \tilde \alpha^{m, s}  & = 144\, \frac{\lambda_{6N}}{N_f^2}\, \breve m_{\Phi}
@@ -192,38 +192,38 @@ Here some factors of $N_f$ appear:
  \left(\partial_{\breve m_{\Phi}}\right)^2 \tilde \alpha^{m, s}  & = 144\, \frac{\lambda_{6N}}{N_f^2}
 %  
         \\ \label{CE:CEP_firstWithDet_shrotcut_beta_rescaled}
- \tilde \beta  & = 24\, \frac{\lambda_{6N}}{N_f^2}
+ \tilde \beta  & = 24\, \frac{\lambda_{6N}}{N_f^3}
 \end{align}
 
 Since the first order contribution is symmetric in $\breve m_{\Phi}$ and $\breve s_{\Phi}$, only the derivatives w.r.t.\ $\breve m_{\Phi}$are given. 
 \begin{align}\label{eq:CEP_derivative_dm_firstOrder_rescaled}
  \partial_{\breve m_{\Phi}} \tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi}) & = 
                            144\,\frac{\lambda_{6N}}{N_f^2}\, \breve m_{\Phi}\, \tilde P_B^2 
-                         - 2\,\tilde \alpha^{m,s}\left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right) \tilde P_B\, \tilde P_{B^2}
-                         - 3\, \tilde \beta \left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
+                         - 2\,\tilde \alpha^{m,s}\left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right) \tilde P_B\, \tilde P_{B^2}
+                         - 3\, \tilde \beta \left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
 %                          
        \\ \label{eq:CEP_derivative_dmdm_firstOrder_rescaled}
  \left(\partial_{\breve m_{\Phi}}\right)^2 \tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi}) & = 
                            144\,\frac{\lambda_{6N}}{N_f^2}\, \tilde P_B^2 -
-                           \left[ 288\,\frac{\lambda_{6N}}{N_f^2}\,\breve m_{\Phi}\left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right) 
-                         + 2\,\tilde \alpha^{m,s}\left( \left(\partial_{\breve m_{\Phi}}\right)^2 D_p^{m,s} \right) \right] \tilde P_B\, \tilde P_{B^2}
+                           \left[ 288\,\frac{\lambda_{6N}}{N_f^2}\,\breve m_{\Phi}\left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right) 
+                         + 2\,\tilde \alpha^{m,s}\left( \left(\partial_{\breve m_{\Phi}}\right)^2 \tilde D_p^{m,s} \right) \right] \tilde P_B\, \tilde P_{B^2}
        \nonumber \\
-                       & + 2\,\tilde \alpha^{m,s}\left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right)^2 \left[ \tilde P_{B^2}^2 + 2\, \tilde P_B\, \tilde P_{B^3} \right]
+                       & + 2\,\tilde \alpha^{m,s}\left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right)^2 \left[ \tilde P_{B^2}^2 + 2\, \tilde P_B\, \tilde P_{B^3} \right]
        \nonumber \\
-                       & - 3\, \tilde \beta \left( \left(\partial_{\breve m_{\Phi}}\right)^2 D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
-                         + 6\, \tilde \beta \left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right)^2 
+                       & - 3\, \tilde \beta \left( \left(\partial_{\breve m_{\Phi}}\right)^2 \tilde D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
+                         + 6\, \tilde \beta \left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right)^2 
                          \left[ \tilde P_B\,  \tilde P_{B^2}^2 - \tilde P_B^2\,  \tilde P_{B^3} \right]
 %                          
       \\ \label{eq:CEP_derivative_dmds_firstOrder_rescaled}
  \partial_{\breve m_{\Phi}}\partial_{\breve s_{\Phi}}\tilde U^{\text{1st}}(\breve m_{\Phi}, \breve s_{\Phi}) & =
-                         \left[- 288\,\frac{\lambda_{6N}}{N_f^2}\left( \breve m_{\Phi} \left( \partial_{\breve s_{\Phi}} D_p^{m,s} \right) + \breve s_{\Phi} \left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right) \right)
-                         - 2\,\tilde \alpha^{m,s} \left( \partial_{\breve m_{\Phi}} \partial_{\breve s_{\Phi}} D_p^{m,s} \right) \right] \tilde P_B\, \tilde P_{B^2}
+                         \left[- 288\,\frac{\lambda_{6N}}{N_f^2}\left( \breve m_{\Phi} \left( \partial_{\breve s_{\Phi}} \tilde D_p^{m,s} \right) + \breve s_{\Phi} \left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right) \right)
+                         - 2\,\tilde \alpha^{m,s} \left( \partial_{\breve m_{\Phi}} \partial_{\breve s_{\Phi}} \tilde D_p^{m,s} \right) \right] \tilde P_B\, \tilde P_{B^2}
       \nonumber \\
-                       & + 2\,\tilde \alpha^{m,s} \left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right)\left( \partial_{\breve s_{\Phi}} D_p^{m,s} \right)
+                       & + 2\,\tilde \alpha^{m,s} \left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right)\left( \partial_{\breve s_{\Phi}} \tilde D_p^{m,s} \right)
                          \left[ \tilde P_{B^2}^2 + 2\, \tilde P_B\, \tilde P_{B^3} \right]
       \nonumber \\
-                       & - 3\, \tilde \beta \left( \partial_{\breve m_{\Phi}}\partial_{\breve s_{\Phi}} D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
-                         + 6\, \tilde \beta \left( \partial_{\breve m_{\Phi}} D_p^{m,s} \right)\left( \partial_{\breve s_{\Phi}} D_p^{m,s} \right)
+                       & - 3\, \tilde \beta \left( \partial_{\breve m_{\Phi}}\partial_{\breve s_{\Phi}} \tilde D_p^{m,s} \right) \tilde P_B^2\,  \tilde P_{B^2}
+                         + 6\, \tilde \beta \left( \partial_{\breve m_{\Phi}} \tilde D_p^{m,s} \right)\left( \partial_{\breve s_{\Phi}} \tilde D_p^{m,s} \right)
                          \left[ \tilde P_B\,  \tilde P_{B^2}^2 - \tilde P_B^2\,  \tilde P_{B^3} \right]
 \end{align}
 
