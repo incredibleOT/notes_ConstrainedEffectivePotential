@@ -39,10 +39,11 @@ If one now repeats the steps leading to \eqref{eq:CEP_firstOrder}, one finds:
                         - \frac{\hat\lambda_6}{V^2} \left( \tilde C_{p,q,r} \right) \right)
           \nonumber \\
                       = & \sqrt{\frac{V}{\det \mathcal{B}}} 
-                        \cdot e^{\left\{ \frac{\hat\lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)}{V}\left( \tilde C_{p,q} \right) 
-                        - \frac{\hat\lambda_6}{V^2} \left( \tilde C_{p,q,r} \right) \right\} }.
+                        \cdot e^{-\left\{ \frac{\hat\lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right)}{V}\left( \tilde C_{p,q} \right) 
+                        + \frac{\hat\lambda_6}{V^2} \left( \tilde C_{p,q,r} \right) \right\} }.
 \end{align}
 The $\tilde C$ are given by:
+\textbf{Here was a serious mistake! The factor of 4 for the contractions was only counted once instead of $4^{\#\text{contractions}}$}
 \begin{align}\label{eq:CEP_firstOrder_twoLoop_withDetAndLambda_6}
  \tilde C_{p,q} & = \widetilde{\sum\limits_{p,q}} \left( 
                      \contraction{}{\tilde\Phi}{{}_{p}^{\dagger}}{\tilde\Phi}
@@ -53,7 +54,7 @@ The $\tilde C$ are given by:
                      \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p}
                      \right) 
         \nonumber \\
-                & = 8\, V^2\, \tilde P_B^2,
+                & = 2\cdot4^2\, V^2\, \tilde P_B^2,
         \\\label{eq:CEP_firstOrder_threeLoop_withDetAndLambda_6}
  \tilde C_{p,q,r} & = \widetilde{\sum\limits_{p,q,r}} \left( 
                      %pp qq rr
@@ -83,23 +84,23 @@ The $\tilde C$ are given by:
                      \bcontraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} }{ \tilde\Phi }{ {}_{r} }{ \tilde\Phi}
                      \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{p}
                       % pq rr qp
-                     \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{q}^{\dagger} }{ \tilde \Phi }
+                   + \contraction{}{ \tilde\Phi }{ {}_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{q}^{\dagger} }{ \tilde \Phi }
                      \contraction[2ex]{ \tilde\Phi_{p}^{\dagger} }{ \tilde\Phi }{ {}_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} }{\tilde \Phi}
                      \bcontraction{ \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} }{ \tilde\Phi }{ {}_{r}^{\dagger} }{ \tilde\Phi }
                      \tilde\Phi_{p}^{\dagger} \tilde\Phi_{q} \tilde\Phi_{r}^{\dagger} \tilde\Phi_{r} \tilde\Phi_{q}^{\dagger} \tilde\Phi_{p}
                      \right)
         \nonumber \\
-                 & = 24\, V^3\, \tilde P_B^3.
+                 & = 6\cdot4^3\, V^3\, \tilde P_B^3.
 \end{align}
 If one also includes the contribution coming fro the first order in $\hat\lambda$ and $\hat\lambda_6$ to the CEP \eqref{eq:improved_zeroOrderPot_withPhi6} 
 or~\eqref{eq:improved_zeroOrderPot_withPhi6_rescaled}the potential
 changes to:
 \begin{align}\label{eq:CEP_oneLoopAddition_withDetAndLambda6}
- U(m_{\Phi}, s_{\Phi}) & \rightarrow U(m_{\Phi}, s_{\Phi}) + 8\,\left(\hat \lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right) \right) \tilde P_B^2
-                        + 24\, \hat\lambda_6 \tilde P_B^3,
+ U(m_{\Phi}, s_{\Phi}) & \rightarrow U(m_{\Phi}, s_{\Phi}) + 32\,\left(\hat \lambda + \hat\lambda_6\left( 9\left( m_{\Phi}^2 + s_{\Phi}^2 \right) \right) \right) \tilde P_B^2
+                        + 384\, \hat\lambda_6 \tilde P_B^3,
       \\ \label{eq:CEP_oneLoopAddition_withDetAndLambda6_rescaled}
  \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) & \rightarrow  
        \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) + 
-                        \frac{8}{N_f^2} \left( \lambda_N + \lambda_{6N} \left( 9\left( \breve{m}_{\Phi}^2 + \breve{s}_{\Phi}^2 \right) \right) \right) \tilde P_B^2
-                        + \frac{24}{N_f^3} \lambda_{6N} \tilde P_B^3.
+                        \frac{32}{N_f^2} \left( \lambda_N + \lambda_{6N} \left( 9\left( \breve{m}_{\Phi}^2 + \breve{s}_{\Phi}^2 \right) \right) \right) \tilde P_B^2
+                        + \frac{384}{N_f^3} \lambda_{6N} \tilde P_B^3.
 \end{align}

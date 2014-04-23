@@ -33,4 +33,37 @@ If one changes to the notation in Philipp's thesis, with the common factor $N_f$
 \end{equation}
 leading to an equivalent contribution to $\tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi})$.
 
+\subsection*{Higher diemensional operators and 1st order in $\hat\lambda_6$}
+
+If one wants to compute the first order contribution in $\hat\lambda_6$, analogous to~\eqref{eq:CEP_oneLoopAddition}, one must consider all possible contractions.
+As for the first order in $\hat \lambda$, the full contraction of all six fields does not contribute, since it is independent of $m_{\Phi}$ and $s_{\Phi}$. Since texing the 
+contractions is annoying, the combinatorics can be found in tab.~\ref{tab:combFactors_1stOrder_lambda6}. \textbf{In addition to thoase combinatoric
+factors a factor of 4 has to be taken into account for each contraction of momenta coming from the nominator in eq.~\eqref{eq:ContractionOfBosonicField}.}
+With this, the contribution to the potential is:
+\begin{align}\label{eq:CEP_1stOrderContribution_lambda6}
+ U(m_{\Phi}, s_{\Phi}) & \rightarrow 
+                          U(m_{\Phi}, s_{\Phi})  +  \hat \lambda_6\, \left[ 36\, \left(m_{\Phi}^4 + s_{\Phi}^4 + 6 m_{\Phi}^2 s_{\Phi}^2\right) P_B 
+                          + 576 \left(m_{\Phi}^2 + s_{\Phi}^2 \right) P_B^2 \right],
+        \\ \label{eq:CEP_1stOrderContribution_lambda6_rescaled}
+ \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) & \rightarrow  
+       \tilde U(\breve{m}_{\Phi},\breve{s}_{\Phi}) 
+                          + \hat \lambda_6\, \left[ \frac{36}{N_f} \left(\breve m_{\Phi}^4 + \breve s_{\Phi}^4 + 6 \breve m_{\Phi}^2 \breve s_{\Phi}^2\right) P_B 
+                          + \frac{576}{N_f^2} \left(\breve m_{\Phi}^2 + \breve s_{\Phi}^2 \right) P_B^2 \right],
+\end{align}
+
+\begin{table}[htb]\centering{
+%   \rowcolors{1}{white}{lightgray}
+  \begin{tabular}{| c | c | c | c || c | c | c | c |}
+		\hline
+		coefficient              & $p_1$ & $p_3$ & $p_5$ & $p_2$ & $p_4$ & $p_6$ & factor               \\ \hline
+		$m_{\Phi}^2$             &  0    &  $p$  &  $q$  &   0   &  $p$  &  $q$  & $6\times6=36$        \\ \hline
+		$s_{\Phi}^2$             & $p_s$ &  $p$  &  $q$  & $p_s$ &  $p$  &  $q$  & $6\times6=36$        \\ \hline
+		$m_{\Phi}^4$             &   0   &  0    &  $p$  &   0   &   0   &  $p$  & $3\times3=9$         \\ \hline
+		$s_{\Phi}^4$             & $p_s$ & $p_s$ &  $p$  & $p_s$ & $p_s$ &  $p$  & $3\times3=9$         \\ \hline
+		$m_{\Phi}^2\,m_{\Phi}^2$ &   0   &  0    &  $p$  & $p_s$ & $p_s$ &  $p$  & $3\times3\times2=18$ \\ \hline
+		$m_{\Phi}^2\,m_{\Phi}^2$ &   0   & $p_s$ &  $p$  &   0   & $p_s$ &  $p$  & $6\times6       =36$ \\ \hline
+  \end{tabular}}
+  \caption{Combinatoric factors for the inclusion of the first order contribution of $\hat\lambda_6$}\label{tab:combFactors_1stOrder_lambda6}
+\end{table}
+
 

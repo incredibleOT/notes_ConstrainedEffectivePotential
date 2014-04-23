@@ -1,0 +1,89 @@
+Since it turned out, that the approach where one assumes to be in te broken phase with the potential given in~\eqref{eq:CEP_lowerBound_with_phi_6} works pretty well in 
+determining the phase structure in presence of small but negative  $\lambda$ and small positive $\lambda_6$ we continue from this approach. Since there are still 
+deviation between simulation data and prediction from the CEP, David suggested, to use a similar approach as in chapter~\ref{ch:alternativeExpansion}, where the gaussian 
+contributions from the interaction part are actually considered for the gaussian part with the drawback of having a vev-dependent bosonic determinant and more complicated 
+expressions for the propagators. However, in this ansatz no iterative scheme is needed, since the Higgs mass should only be taken from the curvature of the potential in its
+minimum. Still, the minimization has to be performed, which will be slightly more complicated.
+
+Starting point here is the bosonic action, where the scalar field was already decomposed into Higgs and Goldstone modes. The only difference in treating those two 
+kinds of fields is in the assumtion of the zero mode. For the Higgs field it is proportional to the vev, while it is zero for the Goldstones:
+\begin{equation}\label{eq:def_zeromodes_inBrokenPhase}
+ \tilde h_0 = \sqrt{V} \hat v,\quad\quad \tilde g_0^{\alpha}=0.
+\end{equation}
+The action is:
+\begin{align}\label{eq:bosonic_action_in_broken_phase_momentum}
+ S & = \frac{1}{2}\sum\limits_{p} \left \{ \tilde h_{-p} \left( \hat p^2 + m_0^2 \right) \tilde h_{p} + 
+                \sum\limits_{\alpha} \tilde g^{\alpha}_{-p} \left( \hat p^2 + m_0^2 \right) \tilde g^{\alpha}_{p} \right\}
+        \nonumber \\
+    & + \frac{\lambda}{V} \sum \limits_{p_1 \dots p_4} \delta_{p_1+ \dots +p_4,0} 
+                \left( \tilde h_{p_1} \tilde h_{p_2} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_1} \tilde g^{\alpha}_{p_2} \right)
+                \left( \tilde h_{p_3} \tilde h_{p_4} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_3} \tilde g^{\alpha}_{p_4} \right)
+             \nonumber \\
+    & + \frac{\lambda_6}{V^2} \sum \limits_{p_1 \dots p_6} \delta_{p_1+ \dots +p_6,0} 
+                \left( \tilde h_{p_1} \tilde h_{p_2} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_1} \tilde g^{\alpha}_{p_2} \right)
+                \left( \tilde h_{p_3} \tilde h_{p_4} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_3} \tilde g^{\alpha}_{p_4} \right)
+                \left( \tilde h_{p_5} \tilde h_{p_6} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_5} \tilde g^{\alpha}_{p_6} \right).
+\end{align}
+
+With this, a decomposition of this action can be done by decomposing it into a tree-level, a gaussian and an interaction part. Tree-level is easy, simply collect
+all terms that only contain zero modes. 
+\begin{equation}\label{eq:tree_level_action_inBrokenPhase}
+ S_B^{\text{tree}} = V \left( \frac{m_0^2}{2} \hat v^2 + \lambda \hat v^4 + \lambda_6 \hat v ^6 \right).
+\end{equation}
+For th gaussian term, we collect all terms, where all but two fields are set to their zero modes. This should lead to:
+\begin{equation}\label{eq:improvedGaussian_action_inBrokenPhase}
+ S_B^{\text{gauss}} = \frac{1}{2}\sum\limits_{p \neq 0} \left\{
+                 \tilde h_{-p} \left ( \hat p^2 + m_0^2 + 12 \hat v^2 \lambda + 30 \hat v^4 \lambda_6 \right) \tilde h_p
+                 + \sum\limits_{\alpha} 
+                 \tilde g^{\alpha}_{-p} \left ( \hat p^2 + m_0^2 + 4 \hat v^2 \lambda + 6 \hat v^4 \lambda_6 \right) \tilde g^{\alpha}_p
+                 \right\}
+\end{equation}
+The interaction part is simply given by the rest:
+\begin{align}\label{eq:improvedInteraction_action_inBrokenPhase}
+ S_B^{\text{int}} & = \frac{\lambda}{V}\widetilde{\sum\limits_{p_1\dots p_4}} \delta_{p_1+ \dots +p_4,0} 
+                      \left( \tilde h_{p_1} \tilde h_{p_2} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_1} \tilde g^{\alpha}_{p_2} \right)
+                      \left( \tilde h_{p_3} \tilde h_{p_4} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_3} \tilde g^{\alpha}_{p_4} \right)
+                      \nonumber \\
+                  & + \frac{\lambda_6}{V}\hat v^2 \widetilde{\sum\limits_{p_1\dots p_4}} \delta_{p_1+ \dots +p_4,0} \left\{
+                    + 30 \, \tilde h_{p_1} \tilde h_{p_2} \tilde h_{p_3} \tilde h_{p_4} 
+                    + 18 \, \tilde h_{p_1} \tilde h_{p_2} \sum\limits_{\alpha} \tilde g^{\alpha}_{p_3} \tilde g^{\alpha}_{p_4}
+                    + 3  \, \sum\limits_{\alpha,\beta} \tilde g^{\alpha}_{p_1} \tilde g^{\alpha}_{p_2}\tilde g^{\beta}_{p_3} \tilde g^{\beta}_{p_4}
+                 \right\}
+                      \nonumber \\
+                  & + \frac{\lambda_6}{V^2} \widetilde {\sum \limits_{p_1 \dots p_6}} \delta_{p_1+ \dots +p_6,0} 
+                \left( \tilde h_{p_1} \tilde h_{p_2} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_1} \tilde g^{\alpha}_{p_2} \right)
+                \left( \tilde h_{p_3} \tilde h_{p_4} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_3} \tilde g^{\alpha}_{p_4} \right)
+                \left( \tilde h_{p_5} \tilde h_{p_6} + \sum\limits_{\alpha} \tilde g^{\alpha}_{p_5} \tilde g^{\alpha}_{p_6} \right).
+\end{align}
+From the gaussian part~\eqref{eq:improvedGaussian_action_inBrokenPhase}, we get the propagators:
+\begin{equation}
+    \label{eq:prop_HiggsAndGoldstone_improved_inBrokenPhase}
+ \contraction{}{\tilde h}{{}_p}{\tilde h{}}  \tilde h_p \tilde h_q = 
+                              \frac{ \delta_{p+q,0}}{\hat p^2 + m_0^2 + 12 \hat v^2 \lambda + 30 \hat v^4 \lambda_6 } \quad \text{and} \quad
+ \contraction{}{\tilde g}{{}^{\alpha}_p}{\tilde g{}}  \tilde g^{\alpha}_p \tilde g^{\beta}_q = 
+                              \frac{ \delta_{p+q,0} \delta_{\alpha,\beta}}{\hat p^2 + m_0^2 + 4 \hat v^2 \lambda + 6 \hat v^4 \lambda_6 }.
+\end{equation}
+As before, for convenience let's define the propagator sums for later use:
+\begin{equation}\label{eq:propagatorSum_improved_inBrokenPhase}
+\tilde P_H = \frac{1}{V} \sum\limits_{p\neq 0} \frac{1}{ \hat p^2 + m_0^2 + 12 \hat v^2 \lambda + 30 \hat v^4 \lambda_6 } \quad\text{and}\quad
+\tilde P_H = \frac{1}{V} \sum\limits_{p\neq 0} \frac{1}{ \hat p^2 + m_0^2 + 4 \hat v^2 \lambda + 6 \hat v^4 \lambda_6 }.
+\end{equation}
+
+In this approach, the bosonic determinant has to be considered for the CEP as well as the first order contributions in $\lambda$ and $\lambda_6$
+\begin{align}
+      \label{eq:CEP_improved_inBrokenPhase_all}
+ U(\hat v) & = U^F(\hat v) + U^T(\hat v) + U^D(\hat v) + U^{(1)}(\hat v) 
+            \\
+      \label{eq:CEP_improved_inBrokenPhase_Fermion}
+ U^F(\hat v) & = -\frac{2\, N_f}{V} \sum\limits_p \left\{
+                  \log\left| \nu(p) + y_t \cdot \hat v \cdot \left( 1-\frac{1}{2 \rho} \right) \nu(p) \right|^2 +
+                  \log\left| \nu(p) + y_b \cdot \hat v \cdot \left( 1-\frac{1}{2 \rho} \right) \nu(p) \right|^2 \right\}
+            \\
+      \label{eq:CEP_improved_inBrokenPhase_Tree}
+ U^T(\hat v) & = \frac{m_0^2}{2} \hat v^2 + \lambda \hat v^4 + \lambda_6 \hat v^6
+             \\
+      \label{eq:CEP_improved_inBrokenPhase_BosDet}
+ U^D(\hat v) & = \sum\limits_{p \neq 0} \left\{
+                  \log \left( \hat p^2 + m_0^2 + 12 \hat v^2 \lambda + 30 \hat v^4 \lambda_6 \right) + 
+                  3\, \log \left( \hat p^2 + m_0^2 + 4 \hat v^2 \lambda + 6 \hat v^4 \lambda_6 \right) \right\}
+\end{align}

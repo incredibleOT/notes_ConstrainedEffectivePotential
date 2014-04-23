@@ -1,6 +1,8 @@
 \label{ch:potAndDerivatives}
 Here I just summerize the potential and it's derivatives for future use. Starting point is the expression \eqref{eq:improved_zeroOrderPot_withPhi6},
 with the possible addition of the first order in $\hat\lambda$ and $\hat\lambda_6$ given in~\eqref{eq:CEP_oneLoopAddition_withDetAndLambda6}
+\textbf{There is a mistake for the 1st order contribution in $\lambda$ and $\lambda_6$. There is a factor of 4 missing for the $\tilde P_B^2$ and a factor of 16 in the 
+$\tilde P_B^3$ term missing}
 \begin{align}\label{eq:CEP_shortCut}
  U(m_{\Phi}, s_{\Phi}) &= U^{\text{tree}}(m_{\Phi}, s_{\Phi}) + U^{\text{ferm}}(m_{\Phi}, s_{\Phi})
                           + U^{\text{BosDet}}(m_{\Phi}, s_{\Phi}) + U^{\text{1st}}(m_{\Phi}, s_{\Phi})
@@ -12,7 +14,7 @@ with the possible addition of the first order in $\hat\lambda$ and $\hat\lambda_
               \\ \label{eq:CEP_ferionicContribution}
  U^{\text{ferm}}(m_{\Phi}, s_{\Phi}) &= -\frac{2N_f}{V} \sum\limits_p \log
                                     \left[ \left( |\nu^+(p)| |\nu^+(\wp)|   +
-                                    \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) g_p\right)^2 
+                                    \hat y ^2 \left( m_{\Phi}^2 - s_{\Phi}^2 \right) |\gamma^+(p)| |\gamma^+(\wp)|\right)^2 
                                               \nonumber \right. \\ 
                         & \left. +  m_{\Phi}^2 \hat y^2 \left( |\gamma^+(p)| |\nu^+(\wp)|   -   |\nu^+(p)| |\gamma^+(\wp)| \right)^2\right] 
                                               \\ \label{eq:CEP_bosonicDeterminantContribution}
